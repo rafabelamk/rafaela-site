@@ -112,87 +112,87 @@ function GoogleBadge() {
 
 function PhoneMockup() {
   return (
-    <div className="relative" style={{width:'360px',height:'520px',flexShrink:0}}>
+    <div className="relative" style={{width:'480px',height:'660px',flexShrink:0}}>
       {/* Glow */}
       <div style={{position:'absolute',inset:0,background:'radial-gradient(ellipse at 50% 50%,rgba(29,78,216,0.18) 0%,transparent 60%)',filter:'blur(40px)',pointerEvents:'none',borderRadius:'50%'}}/>
       {/* Phone shell */}
-      <div style={{position:'absolute',left:'80px',top:'40px',width:'200px',height:'420px',background:'linear-gradient(160deg,rgba(255,255,255,0.08) 0%,rgba(255,255,255,0.02) 100%)',border:'1.5px solid rgba(255,255,255,0.16)',borderRadius:'40px',boxShadow:'0 32px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.1)'}}>
+      <div style={{position:'absolute',left:'100px',top:'50px',width:'280px',height:'560px',background:'linear-gradient(160deg,rgba(255,255,255,0.08) 0%,rgba(255,255,255,0.02) 100%)',border:'1.5px solid rgba(255,255,255,0.16)',borderRadius:'52px',boxShadow:'0 32px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.1)'}}>
         {/* Dynamic island */}
-        <div style={{position:'absolute',top:'12px',left:'50%',transform:'translateX(-50%)',width:'76px',height:'22px',background:'#030712',borderRadius:'12px'}}/>
+        <div style={{position:'absolute',top:'14px',left:'50%',transform:'translateX(-50%)',width:'100px',height:'28px',background:'#030712',borderRadius:'16px'}}/>
         {/* Side buttons */}
-        <div style={{position:'absolute',left:'-2px',top:'80px',width:'2px',height:'28px',background:'rgba(255,255,255,0.14)',borderRadius:'2px 0 0 2px'}}/>
-        <div style={{position:'absolute',left:'-2px',top:'120px',width:'2px',height:'44px',background:'rgba(255,255,255,0.14)',borderRadius:'2px 0 0 2px'}}/>
-        <div style={{position:'absolute',right:'-2px',top:'104px',width:'2px',height:'52px',background:'rgba(255,255,255,0.14)',borderRadius:'0 2px 2px 0'}}/>
+        <div style={{position:'absolute',left:'-2px',top:'100px',width:'2px',height:'36px',background:'rgba(255,255,255,0.14)',borderRadius:'2px 0 0 2px'}}/>
+        <div style={{position:'absolute',left:'-2px',top:'150px',width:'2px',height:'56px',background:'rgba(255,255,255,0.14)',borderRadius:'2px 0 0 2px'}}/>
+        <div style={{position:'absolute',right:'-2px',top:'130px',width:'2px',height:'68px',background:'rgba(255,255,255,0.14)',borderRadius:'0 2px 2px 0'}}/>
         {/* Screen */}
-        <div style={{position:'absolute',left:'2px',right:'2px',top:'46px',bottom:'2px',background:'linear-gradient(180deg,#0d1b3e 0%,#060f22 100%)',borderRadius:'37px',overflow:'hidden'}}>
-          <div style={{padding:'14px 12px',height:'100%',display:'flex',flexDirection:'column',boxSizing:'border-box'}}>
+        <div style={{position:'absolute',left:'2px',right:'2px',top:'58px',bottom:'2px',background:'linear-gradient(180deg,#0d1b3e 0%,#060f22 100%)',borderRadius:'48px',overflow:'hidden'}}>
+          <div style={{padding:'18px 16px',height:'100%',display:'flex',flexDirection:'column',boxSizing:'border-box'}}>
             {/* Status bar */}
-            <div style={{display:'flex',justifyContent:'space-between',marginBottom:'14px'}}>
-              <span style={{color:'rgba(255,255,255,0.5)',fontSize:'10px',fontWeight:'600'}}>9:41</span>
-              <span style={{color:'rgba(255,255,255,0.4)',fontSize:'10px'}}>▪▪▪</span>
+            <div style={{display:'flex',justifyContent:'space-between',marginBottom:'18px'}}>
+              <span style={{color:'rgba(255,255,255,0.5)',fontSize:'13px',fontWeight:'600'}}>9:41</span>
+              <span style={{color:'rgba(255,255,255,0.4)',fontSize:'13px'}}>▪▪▪</span>
             </div>
             {/* Platform 2×2 grid */}
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'8px',marginBottom:'10px'}}>
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',marginBottom:'12px'}}>
               {[
                 {label:'Instagram',bg:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',
-                 icon:<svg style={{width:'17px',height:'17px',fill:'white'}} viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>},
+                 icon:<svg style={{width:'22px',height:'22px',fill:'white'}} viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>},
                 {label:'Facebook',bg:'#1877f2',
-                 icon:<svg style={{width:'17px',height:'17px',fill:'white'}} viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>},
+                 icon:<svg style={{width:'22px',height:'22px',fill:'white'}} viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>},
                 {label:'Google Ads',bg:'white',
-                 icon:<svg style={{width:'17px',height:'17px'}} viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>},
+                 icon:<svg style={{width:'22px',height:'22px'}} viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>},
                 {label:'Google Meu Negócio',bg:'white',
-                 icon:<svg style={{width:'17px',height:'17px'}} viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#34A853"/><circle cx="12" cy="9" r="1.8" fill="#4285F4"/></svg>},
+                 icon:<svg style={{width:'22px',height:'22px'}} viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#34A853"/><circle cx="12" cy="9" r="1.8" fill="#4285F4"/></svg>},
               ].map((p,i)=>(
-                <div key={i} style={{borderRadius:'14px',padding:'10px 6px',display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.07)'}}>
-                  <div style={{width:'34px',height:'34px',borderRadius:'9px',background:p.bg,display:'flex',alignItems:'center',justifyContent:'center'}}>{p.icon}</div>
-                  <span style={{color:'rgba(255,255,255,0.38)',fontSize:'7px',textAlign:'center',lineHeight:'1.25'}}>{p.label}</span>
+                <div key={i} style={{borderRadius:'16px',padding:'12px 8px',display:'flex',flexDirection:'column',alignItems:'center',gap:'6px',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.07)'}}>
+                  <div style={{width:'44px',height:'44px',borderRadius:'12px',background:p.bg,display:'flex',alignItems:'center',justifyContent:'center'}}>{p.icon}</div>
+                  <span style={{color:'rgba(255,255,255,0.38)',fontSize:'9px',textAlign:'center',lineHeight:'1.25'}}>{p.label}</span>
                 </div>
               ))}
             </div>
             {/* Mini chart */}
-            <div style={{borderRadius:'14px',padding:'10px',flex:1,background:'rgba(29,78,216,0.1)',border:'1px solid rgba(29,78,216,0.18)',boxSizing:'border-box'}}>
-              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'8px'}}>
-                <span style={{color:'rgba(255,255,255,0.32)',fontSize:'7px',textTransform:'uppercase',letterSpacing:'0.1em'}}>Performance ao vivo</span>
-                <div style={{width:'5px',height:'5px',borderRadius:'50%',background:'#4ade80'}}/>
+            <div style={{borderRadius:'16px',padding:'12px',flex:1,background:'rgba(29,78,216,0.1)',border:'1px solid rgba(29,78,216,0.18)',boxSizing:'border-box'}}>
+              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'10px'}}>
+                <span style={{color:'rgba(255,255,255,0.32)',fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.1em'}}>Performance ao vivo</span>
+                <div style={{width:'6px',height:'6px',borderRadius:'50%',background:'#4ade80'}}/>
               </div>
-              <div style={{display:'flex',alignItems:'flex-end',gap:'3px',height:'34px'}}>
+              <div style={{display:'flex',alignItems:'flex-end',gap:'4px',height:'44px'}}>
                 {[28,44,36,60,50,68,62].map((h,i)=>(
-                  <div key={i} style={{flex:1,borderRadius:'3px',height:`${Math.round(h*0.5)}px`,background:i===6?'rgba(59,130,246,0.85)':'rgba(59,130,246,0.2)'}}/>
+                  <div key={i} style={{flex:1,borderRadius:'4px',height:`${Math.round(h*0.64)}px`,background:i===6?'rgba(59,130,246,0.85)':'rgba(59,130,246,0.2)'}}/>
                 ))}
               </div>
-              <div style={{display:'flex',justifyContent:'space-between',marginTop:'6px'}}>
-                <span style={{color:'rgba(255,255,255,0.4)',fontSize:'8px'}}>+32 leads</span>
-                <span style={{color:'#4ade80',fontSize:'8px'}}>↑ 22%</span>
+              <div style={{display:'flex',justifyContent:'space-between',marginTop:'8px'}}>
+                <span style={{color:'rgba(255,255,255,0.4)',fontSize:'10px'}}>+32 leads</span>
+                <span style={{color:'#4ade80',fontSize:'10px'}}>↑ 22%</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       {/* Story ring: perfil Instagram */}
-      <div style={{position:'absolute',left:'-10px',top:'55px',zIndex:10,display:'flex',flexDirection:'column',alignItems:'center',gap:'6px',animation:'floatIcon 3.8s ease-in-out infinite',animationDelay:'0.4s'}}>
-        <div style={{width:'110px',height:'110px',borderRadius:'50%',background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',padding:'3px',boxShadow:'0 8px 28px rgba(0,0,0,0.3)'}}>
-          <div style={{width:'100%',height:'100%',borderRadius:'50%',border:'3px solid #0d1b3e',overflow:'hidden'}}>
-            <Image src="/foto-perfil.png" alt="Rafaela Geiger" width={110} height={110} style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
+      <div style={{position:'absolute',left:'-15px',top:'60px',zIndex:10,display:'flex',flexDirection:'column',alignItems:'center',gap:'7px',animation:'floatIcon 3.8s ease-in-out infinite',animationDelay:'0.4s'}}>
+        <div style={{width:'140px',height:'140px',borderRadius:'50%',background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',padding:'4px',boxShadow:'0 8px 28px rgba(0,0,0,0.3)'}}>
+          <div style={{width:'100%',height:'100%',borderRadius:'50%',border:'4px solid #0d1b3e',overflow:'hidden'}}>
+            <Image src="/foto-perfil.png" alt="Rafaela Geiger" width={140} height={140} style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
           </div>
         </div>
-        <span style={{color:'rgba(255,255,255,0.6)',fontSize:'9px',fontWeight:'600',letterSpacing:'0.02em'}}>@arafaelageiger</span>
+        <span style={{color:'rgba(255,255,255,0.6)',fontSize:'11px',fontWeight:'600',letterSpacing:'0.02em'}}>@arafaelageiger</span>
       </div>
       {/* Badge 1: novo lead */}
-      <div style={{position:'absolute',top:'68px',right:'0',background:'white',borderRadius:'14px',padding:'9px 12px',boxShadow:'0 12px 36px rgba(0,0,0,0.14)',display:'flex',alignItems:'center',gap:'9px',animation:'floatIcon 3s ease-in-out infinite',zIndex:10}}>
-        <div style={{width:'28px',height:'28px',borderRadius:'8px',background:'#22c55e',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-          <svg style={{width:'14px',height:'14px',stroke:'white'}} fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/></svg>
+      <div style={{position:'absolute',top:'72px',right:'0',background:'white',borderRadius:'14px',padding:'10px 14px',boxShadow:'0 12px 36px rgba(0,0,0,0.14)',display:'flex',alignItems:'center',gap:'10px',animation:'floatIcon 3s ease-in-out infinite',zIndex:10}}>
+        <div style={{width:'32px',height:'32px',borderRadius:'9px',background:'#22c55e',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
+          <svg style={{width:'16px',height:'16px',stroke:'white'}} fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/></svg>
         </div>
-        <div><div style={{color:'#111827',fontSize:'11px',fontWeight:'700',lineHeight:'1.3'}}>Novo lead!</div><div style={{color:'#9ca3af',fontSize:'9px'}}>Meta Ads</div></div>
+        <div><div style={{color:'#111827',fontSize:'13px',fontWeight:'700',lineHeight:'1.3'}}>Novo lead!</div><div style={{color:'#9ca3af',fontSize:'11px'}}>Meta Ads</div></div>
       </div>
       {/* Badge 2: ROAS */}
-      <div style={{position:'absolute',top:'218px',left:'0',background:'white',borderRadius:'14px',padding:'9px 12px',boxShadow:'0 12px 36px rgba(0,0,0,0.14)',animation:'floatIcon 3.5s ease-in-out infinite',animationDelay:'0.8s',zIndex:10}}>
-        <div style={{color:'#1d4ed8',fontSize:'13px',fontWeight:'900',lineHeight:'1.3'}}>ROAS 4.2×</div>
-        <div style={{color:'#9ca3af',fontSize:'9px'}}>retorno sobre ad spend</div>
+      <div style={{position:'absolute',top:'280px',left:'0',background:'white',borderRadius:'14px',padding:'10px 14px',boxShadow:'0 12px 36px rgba(0,0,0,0.14)',animation:'floatIcon 3.5s ease-in-out infinite',animationDelay:'0.8s',zIndex:10}}>
+        <div style={{color:'#1d4ed8',fontSize:'15px',fontWeight:'900',lineHeight:'1.3'}}>ROAS 4.2×</div>
+        <div style={{color:'#9ca3af',fontSize:'11px'}}>retorno sobre ad spend</div>
       </div>
       {/* Badge 3: conversões */}
-      <div style={{position:'absolute',bottom:'82px',right:'0',background:'#0d1b3e',border:'1px solid rgba(59,130,246,0.25)',borderRadius:'14px',padding:'9px 12px',boxShadow:'0 12px 36px rgba(0,0,0,0.28)',animation:'floatIcon 4s ease-in-out infinite',animationDelay:'1.5s',zIndex:10}}>
-        <div style={{color:'white',fontSize:'11px',fontWeight:'700',lineHeight:'1.3'}}>↑ 24% conversões</div>
-        <div style={{color:'rgba(255,255,255,0.4)',fontSize:'9px'}}>Google Ads</div>
+      <div style={{position:'absolute',bottom:'90px',right:'0',background:'#0d1b3e',border:'1px solid rgba(59,130,246,0.25)',borderRadius:'14px',padding:'10px 14px',boxShadow:'0 12px 36px rgba(0,0,0,0.28)',animation:'floatIcon 4s ease-in-out infinite',animationDelay:'1.5s',zIndex:10}}>
+        <div style={{color:'white',fontSize:'13px',fontWeight:'700',lineHeight:'1.3'}}>↑ 24% conversões</div>
+        <div style={{color:'rgba(255,255,255,0.4)',fontSize:'11px'}}>Google Ads</div>
       </div>
     </div>
   )
@@ -252,13 +252,13 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="relative bg-[#0d1b3e] pt-36 pb-28 px-5 sm:px-8 overflow-hidden">
+      <section id="home" className="relative bg-[#0d1b3e] pt-24 pb-12 sm:pt-36 sm:pb-20 px-5 sm:px-8 overflow-hidden">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-[#1d4ed8]/8 to-transparent pointer-events-none"/>
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#1d4ed8]/5 rounded-full blur-3xl pointer-events-none"/>
         <div className="max-w-6xl mx-auto relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
-                <div className="flex flex-wrap items-center gap-2 mb-6">
+              <div className="flex flex-wrap items-center gap-2 mb-5">
                 <span className="flex items-center gap-1.5 text-white text-[11px] font-bold px-3 py-1.5 rounded-full tracking-wide" style={{background:'#0082FB'}}>
                   <svg style={{width:'15px',height:'9px',flexShrink:0,display:'block'}} viewBox="0 0 30 18"><path d="M7.5 1C3.9 1 1 4.8 1 9s2.9 8 6.5 8c2.4 0 4.8-2.1 6.5-5.2C15.7 14.9 18.1 17 20.5 17c3.6 0 6.5-3.8 6.5-8s-2.9-8-6.5-8c-2.4 0-4.8 2.1-6.5 5.2C12.3 3.1 9.9 1 7.5 1z" fill="white"/></svg>
                   Meta Ads
@@ -272,25 +272,28 @@ export default function Home() {
                   Performance
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.08] mb-6">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-[1.08] mb-5">
                 Transforme investimento em anúncios em <span className="text-blue-400">crescimento real</span> e mensurável.
               </h1>
-              <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+              <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-7 max-w-2xl">
                 Sou Rafaela Geiger, gestora de tráfego e analista de mídia paga e performance. Ajudo negócios locais, infoprodutores e marcas a crescerem de forma previsível com estratégia, dados e otimização contínua.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3">
                 <a href={WA} target="_blank" rel="noreferrer"
-                   className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/40">
+                   className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-7 py-3.5 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/40">
                   <IconWA className="w-5 h-5"/> Quero uma análise gratuita
                 </a>
-                <a href="#servicos" className="border border-white/25 hover:border-white/50 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:bg-white/5">Ver serviços ↓</a>
+                <a href="#servicos" className="border border-white/25 hover:border-white/50 text-white px-7 py-3.5 rounded-full font-semibold text-base sm:text-lg transition-all hover:bg-white/5">Ver serviços ↓</a>
               </div>
             </div>
-            <div className="flex justify-center items-center mt-4 lg:mt-0" style={{transform:'scale(0.78)',transformOrigin:'center top'}}>
-              <PhoneMockup/>
+            {/* Mockup: menor no mobile com overflow controlado */}
+            <div className="flex justify-center items-start overflow-hidden" style={{height:'440px'}}>
+              <div style={{transform:'scale(0.58)',transformOrigin:'center top'}}>
+                <PhoneMockup/>
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 sm:mt-20 pt-10 sm:pt-12 border-t border-white/10">
             {STATS.map(s => (
               <div key={s.label} className="flex flex-col gap-2">
                 {s.icon ? (
@@ -410,22 +413,22 @@ export default function Home() {
 
       {/* PARA QUEM */}
       <section className="bg-white py-24 px-5 sm:px-8">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-14">Para quem são os meus serviços</h2>
-          <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><circle cx="15" cy="10" r="5"/><path d="M5 28c0-5.523 4.477-10 10-10s10 4.477 10 10" strokeLinecap="round"/><path d="M24 4v8M20 8h8" strokeLinecap="round"/></svg>, text:'Precisa adquirir novos clientes' },
               { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><circle cx="24" cy="7" r="3"/><circle cx="8" cy="16" r="3"/><circle cx="24" cy="25" r="3"/><path d="M11 14.5l10-6M11 17.5l10 6" strokeLinecap="round"/></svg>, text:'Quer distribuir conteúdo' },
               { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><path d="M4 22l7-8 6 6 10-12" strokeLinecap="round" strokeLinejoin="round"/><path d="M4 28h24" strokeLinecap="round"/></svg>, text:'Quer aumentar suas vendas' },
               { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><path d="M5 20V12h6l10-6v20L11 20H5z" strokeLinecap="round" strokeLinejoin="round"/><path d="M23 10c2.2 1.6 3.5 4 3.5 6s-1.3 4.4-3.5 6" strokeLinecap="round"/></svg>, text:'Quer anunciar de forma profissional' },
-              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><path d="M28 10a12 12 0 11-20.8-8" strokeLinecap="round"/><path d="M4 4v6h6" strokeLinecap="round" strokeLinejoin="round"/></svg>, text:'Fez tráfego e obteve resultados ruins' },
+              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><rect x="4" y="4" width="24" height="24" rx="4" strokeLinecap="round"/><path d="M11 11l10 10M21 11l-10 10" strokeLinecap="round"/></svg>, text:'Fez tráfego e obteve resultados ruins' },
               { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><circle cx="16" cy="16" r="11"/><path d="M16 10v6l4 2" strokeLinecap="round"/></svg>, text:'Não tem tempo de fazer seus próprios anúncios' },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl p-5 flex items-center gap-5 border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-                <div className="w-14 h-14 bg-[#eff6ff] rounded-xl flex items-center justify-center flex-shrink-0">
+              <div key={i} className="bg-white rounded-2xl p-4 flex items-center gap-4 border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+                <div className="w-12 h-12 bg-[#eff6ff] rounded-xl flex items-center justify-center flex-shrink-0">
                   {item.icon}
                 </div>
-                <p className="text-[#0d1b3e] font-bold text-base leading-snug">{item.text}</p>
+                <p className="text-[#0d1b3e] font-bold text-sm leading-snug">{item.text}</p>
               </div>
             ))}
           </div>
@@ -550,32 +553,29 @@ export default function Home() {
       {/* DEPOIMENTOS */}
       <section className="bg-[#f0f4ff] py-24 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que meus <span className="text-[#1d4ed8]">clientes dizem</span></h2>
           </div>
-          {/* Carousel */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 sm:p-10 flex flex-col items-center text-center border border-gray-100 shadow-sm min-h-[280px] justify-between">
-              <div className="flex gap-1 mb-5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
-              <p className="text-gray-600 leading-relaxed mb-8 text-[15px] italic flex-1">"{TESTIMONIALS[activeT].text}"</p>
-              <div className="flex flex-col items-center gap-2">
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-black text-base" style={{backgroundColor: TESTIMONIALS[activeT].color}}>{TESTIMONIALS[activeT].initials}</div>
-                  <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white flex items-center justify-center shadow-md"><GoogleBadge/></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {TESTIMONIALS.map((t, i) => (
+              <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                {/* Header: avatar + nome + badge G */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
+                    <div>
+                      <p className="font-black text-[#0d1b3e] text-sm leading-tight">{t.name}</p>
+                      <p className="text-gray-400 text-[11px]">{t.handle}</p>
+                    </div>
+                  </div>
+                  <GoogleBadge/>
                 </div>
-                <div>
-                  <p className="font-black text-[#0d1b3e] text-sm">{TESTIMONIALS[activeT].name}</p>
-                  <p className="text-gray-400 text-xs">{TESTIMONIALS[activeT].handle}</p>
-                </div>
+                {/* Estrelas */}
+                <div className="flex gap-0.5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
+                {/* Texto */}
+                <p className="text-gray-600 text-[13px] leading-relaxed flex-1">"{t.text}"</p>
               </div>
-            </div>
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-5">
-              {TESTIMONIALS.map((_, i) => (
-                <button key={i} onClick={() => setActiveT(i)}
-                  className={`rounded-full transition-all duration-300 ${i === activeT ? 'w-6 h-2.5 bg-[#1d4ed8]' : 'w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400'}`}/>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
