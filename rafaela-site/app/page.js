@@ -398,7 +398,7 @@ export default function Home() {
               { bg:'linear-gradient(135deg,#1d4ed8,#3b82f6)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><circle cx="15" cy="10" r="5"/><path d="M5 28c0-5.523 4.477-10 10-10s10 4.477 10 10" strokeLinecap="round"/><path d="M24 4v8M20 8h8" strokeLinecap="round"/></svg>, text:'Precisa adquirir novos clientes' },
               { bg:'linear-gradient(135deg,#f97316,#fb923c)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><circle cx="24" cy="7" r="3"/><circle cx="8" cy="16" r="3"/><circle cx="24" cy="25" r="3"/><path d="M11 14.5l10-6M11 17.5l10 6" strokeLinecap="round"/></svg>, text:'Quer distribuir conteúdo' },
               { bg:'linear-gradient(135deg,#16a34a,#22c55e)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><path d="M4 22l7-8 6 6 10-12" strokeLinecap="round" strokeLinejoin="round"/><path d="M4 28h24" strokeLinecap="round"/></svg>, text:'Quer aumentar suas vendas' },
-              { bg:'linear-gradient(135deg,#7c3aed,#a78bfa)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><path d="M6 22V10l3 2 5-6 5 6 3-2v12H6z" strokeLinecap="round" strokeLinejoin="round"/><path d="M4 22h24" strokeLinecap="round"/><path d="M13 22v-6h6v6" strokeLinecap="round"/></svg>, text:'Quer anunciar de forma profissional' },
+              { bg:'linear-gradient(135deg,#7c3aed,#a78bfa)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><path d="M5 20V12h6l10-6v20L11 20H5z" strokeLinecap="round" strokeLinejoin="round"/><path d="M23 10.5c2.2 1.6 3.5 4 3.5 5.5s-1.3 3.9-3.5 5.5" strokeLinecap="round"/></svg>, text:'Quer anunciar de forma profissional' },
             ].map((item, i) => (
               <div key={i} className="bg-[#f0f4ff] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:shadow-md transition-all hover:-translate-y-1">
                 <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-sm" style={{background:item.bg}}>{item.icon}</div>
@@ -656,6 +656,14 @@ export default function Home() {
               <div className="absolute -top-4 -right-4 bg-[#1d4ed8] rounded-2xl px-4 py-3 text-center shadow-xl shadow-blue-900/30">
                 <p className="text-white text-2xl font-black leading-none">2+</p>
                 <p className="text-white/80 text-xs mt-0.5">anos de experiência</p>
+              </div>
+              {/* Pedro Sobral reference image */}
+              <div className="mt-6 rounded-2xl overflow-hidden shadow-md border border-gray-100 relative">
+                <Image src="/pedrosobral.png" alt="Subido de Tráfego - Pedro Sobral" width={800} height={500} className="w-full h-auto object-cover"/>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d1b3e]/85 to-transparent px-5 py-4">
+                  <p className="text-white text-xs font-black uppercase tracking-wider">Subido de Tráfego</p>
+                  <p className="text-white/60 text-xs">Formação por Pedro Sobral</p>
+                </div>
               </div>
             </div>
             <div className="order-1 md:order-2">
