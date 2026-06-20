@@ -252,7 +252,7 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="relative bg-[#0d1b3e] pt-24 pb-12 lg:pt-20 lg:pb-8 px-5 sm:px-8 overflow-hidden lg:min-h-[calc(100vh-80px)] lg:flex lg:flex-col lg:justify-center">
+      <section id="home" className="relative bg-[#0d1b3e] pt-20 pb-10 lg:pt-16 lg:pb-8 px-5 sm:px-8 overflow-hidden lg:min-h-[calc(100vh-80px)] lg:flex lg:flex-col lg:justify-center">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-[#1d4ed8]/8 to-transparent pointer-events-none"/>
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#1d4ed8]/5 rounded-full blur-3xl pointer-events-none"/>
         <div className="max-w-6xl mx-auto relative w-full">
@@ -292,9 +292,9 @@ export default function Home() {
                 <PhoneMockup/>
               </div>
             </div>
-            {/* Mockup mobile: escala pequena, sem altura fixa que causa espaço vazio */}
-            <div className="flex lg:hidden justify-center items-center" style={{marginTop:'8px'}}>
-              <div style={{transform:'scale(0.52)',transformOrigin:'top center',height:'300px',overflow:'hidden'}}>
+            {/* Mockup mobile: centralizado, escala controlada, sem espaço vazio */}
+            <div className="flex lg:hidden justify-center items-start overflow-hidden" style={{height:'260px',marginTop:'4px'}}>
+              <div style={{transform:'scale(0.48)',transformOrigin:'top center'}}>
                 <PhoneMockup/>
               </div>
             </div>
@@ -336,30 +336,30 @@ export default function Home() {
       <section className="bg-white py-16 px-5 sm:px-8 border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-gray-400 text-sm font-semibold uppercase tracking-widest mb-10">Plataformas onde anuncio para o seu negócio</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
-                <IconIG className="w-8 h-8 text-white"/>
+          <div className="flex flex-nowrap items-center justify-center gap-4 sm:gap-8 md:gap-16 overflow-x-auto">
+            <div className="flex flex-col items-center gap-2 flex-shrink-0">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+                <IconIG className="w-6 h-6 sm:w-8 sm:h-8 text-white"/>
               </div>
-              <span className="text-gray-600 text-sm font-semibold">Instagram</span>
+              <span className="text-gray-600 text-xs sm:text-sm font-semibold">Instagram</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 rounded-2xl bg-[#25d366] flex items-center justify-center">
-                <IconWA className="w-8 h-8 text-white"/>
+            <div className="flex flex-col items-center gap-2 flex-shrink-0">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#25d366] flex items-center justify-center">
+                <IconWA className="w-6 h-6 sm:w-8 sm:h-8 text-white"/>
               </div>
-              <span className="text-gray-600 text-sm font-semibold">WhatsApp</span>
+              <span className="text-gray-600 text-xs sm:text-sm font-semibold">WhatsApp</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 rounded-2xl bg-[#1877f2] flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <div className="flex flex-col items-center gap-2 flex-shrink-0">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#1877f2] flex items-center justify-center">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </div>
-              <span className="text-gray-600 text-sm font-semibold">Facebook</span>
+              <span className="text-gray-600 text-xs sm:text-sm font-semibold">Facebook</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 rounded-2xl bg-white border-2 border-gray-100 flex items-center justify-center shadow-sm">
-                <svg className="w-8 h-8" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <div className="flex flex-col items-center gap-2 flex-shrink-0">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-white border-2 border-gray-100 flex items-center justify-center shadow-sm">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
               </div>
-              <span className="text-gray-600 text-sm font-semibold">Google</span>
+              <span className="text-gray-600 text-xs sm:text-sm font-semibold">Google</span>
             </div>
           </div>
         </div>
@@ -562,10 +562,29 @@ export default function Home() {
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que meus <span className="text-[#1d4ed8]">clientes dizem</span></h2>
           </div>
-          {/* Carrossel universal */}
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+          {/* Desktop: grid 4 colunas */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 snap-start flex-shrink-0" style={{width:'min(340px, calc(100vw - 60px))'}}>
+              <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
+                    <div>
+                      <p className="font-black text-[#0d1b3e] text-sm leading-tight">{t.name}</p>
+                      <p className="text-gray-400 text-[11px]">{t.handle}</p>
+                    </div>
+                  </div>
+                  <GoogleBadge/>
+                </div>
+                <div className="flex gap-0.5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
+                <p className="text-gray-600 text-[13px] leading-relaxed flex-1">"{t.text}"</p>
+              </div>
+            ))}
+          </div>
+          {/* Mobile: carrossel */}
+          <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+            {TESTIMONIALS.map((t, i) => (
+              <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 snap-start flex-shrink-0" style={{width:'calc(100vw - 60px)'}}>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
@@ -581,7 +600,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex justify-center gap-1.5 mt-3">
+          <div className="flex sm:hidden justify-center gap-1.5 mt-3">
             {TESTIMONIALS.map((_, i) => <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#1d4ed8]/30"/>)}
           </div>
         </div>
@@ -594,16 +613,29 @@ export default function Home() {
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Portfólio</span>
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3">Clientes já atendidos</h2>
           </div>
-          {/* Carrossel universal */}
-          <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+          {/* Desktop: flex-wrap centralizado */}
+          <div className="hidden sm:flex flex-wrap justify-center gap-5">
             {LOGOS.map(logo => (
-              <div key={logo.name} className="flex flex-col items-center gap-2 snap-center flex-shrink-0">
-                <div className="w-24 h-24 bg-white rounded-[22px] flex items-center justify-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                  <div className="relative w-20 h-20">
-                    <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="80px"/>
+              <div key={logo.name} className="flex flex-col items-center gap-2">
+                <div className="w-20 h-20 bg-white rounded-[22px] flex items-center justify-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="relative w-16 h-16">
+                    <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="64px"/>
                   </div>
                 </div>
-                <span className="text-gray-500 text-xs font-medium text-center w-24 leading-tight">{logo.name}</span>
+                <span className="text-gray-500 text-xs font-medium text-center max-w-[80px] leading-tight">{logo.name}</span>
+              </div>
+            ))}
+          </div>
+          {/* Mobile: carrossel */}
+          <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+            {LOGOS.map(logo => (
+              <div key={logo.name} className="flex flex-col items-center gap-2 snap-center flex-shrink-0">
+                <div className="w-20 h-20 bg-white rounded-[22px] flex items-center justify-center shadow-sm border border-gray-100 overflow-hidden">
+                  <div className="relative w-16 h-16">
+                    <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="64px"/>
+                  </div>
+                </div>
+                <span className="text-gray-500 text-xs font-medium text-center w-20 leading-tight">{logo.name}</span>
               </div>
             ))}
           </div>
@@ -611,7 +643,7 @@ export default function Home() {
       </section>
 
       {/* ESPECIALISTAS */}
-      <section className="bg-[#f0f4ff] py-16 px-5 sm:px-8">
+      <section className="bg-[#f0f4ff] pt-16 pb-8 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Experiência</span>
@@ -641,7 +673,7 @@ export default function Home() {
         </div>
       </section>
       {/* CERTIFICAÇÃO */}
-      <section className="bg-white py-24 px-5 sm:px-8">
+      <section className="bg-white pt-8 pb-24 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
