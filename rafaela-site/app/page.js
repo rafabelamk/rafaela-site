@@ -168,6 +168,15 @@ function PhoneMockup() {
           </div>
         </div>
       </div>
+      {/* Story ring: perfil Instagram */}
+      <div style={{position:'absolute',left:'8px',top:'85px',zIndex:10,display:'flex',flexDirection:'column',alignItems:'center',gap:'4px',animation:'floatIcon 3.8s ease-in-out infinite',animationDelay:'0.4s'}}>
+        <div style={{width:'56px',height:'56px',borderRadius:'50%',background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',padding:'2.5px',boxShadow:'0 8px 24px rgba(0,0,0,0.25)'}}>
+          <div style={{width:'100%',height:'100%',borderRadius:'50%',border:'2.5px solid #0d1b3e',overflow:'hidden'}}>
+            <Image src="/foto-perfil.png" alt="Rafaela Geiger" width={56} height={56} style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
+          </div>
+        </div>
+        <span style={{color:'rgba(255,255,255,0.55)',fontSize:'7px',fontWeight:'600',letterSpacing:'0.02em'}}>@arafaelageiger</span>
+      </div>
       {/* Badge 1: novo lead */}
       <div style={{position:'absolute',top:'68px',right:'0',background:'white',borderRadius:'14px',padding:'9px 12px',boxShadow:'0 12px 36px rgba(0,0,0,0.14)',display:'flex',alignItems:'center',gap:'9px',animation:'floatIcon 3s ease-in-out infinite',zIndex:10}}>
         <div style={{width:'28px',height:'28px',borderRadius:'8px',background:'#22c55e',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
@@ -251,7 +260,7 @@ export default function Home() {
             <div>
                 <div className="flex flex-wrap items-center gap-2 mb-6">
                 <span className="flex items-center gap-1.5 text-white text-[11px] font-bold px-3 py-1.5 rounded-full tracking-wide" style={{background:'#0082FB'}}>
-                  <svg style={{width:'13px',height:'13px'}} viewBox="0 0 36 36" fill="white"><path d="M18 14.4c-1.944-2.916-4.86-5.4-7.344-5.4C5.724 9 3 13.428 3 18c0 2.916.756 4.86 2.268 4.86 1.08 0 2.268-.972 3.888-3.024L10.8 17.46c.756-1.08 1.512-2.268 2.376-3.24.756.864 1.404 1.944 2.052 3.024l1.512 2.7C14.796 23.028 12.96 25.02 10.8 25.02c-1.404 0-2.7-.54-3.672-1.62C5.4 21.78 4.5 19.62 4.5 17.028 4.5 12.204 7.2 7.5 11.196 7.5c3.348 0 6.48 2.916 8.532 5.832.54-.756 1.08-1.512 1.62-2.16C23.22 8.904 25.488 7.5 27.972 7.5 31.968 7.5 34.5 12.204 34.5 17.028c0 2.592-.9 4.752-2.628 6.372-.972 1.08-2.268 1.62-3.672 1.62-2.16 0-3.996-1.98-5.94-5.4l-1.512-2.7c-.648-1.08-1.296-2.16-2.052-3.024-.864.972-1.62 2.16-2.376 3.24l-1.728 2.376c1.62 2.052 2.7 3.024 3.888 3.024C20.916 22.86 21.6 20.916 21.6 18c0-4.572-2.7-9-6.66-9-2.484 0-5.4 2.484-7.344 5.4"/></svg>
+                  <svg style={{width:'15px',height:'9px',flexShrink:0,display:'block'}} viewBox="0 0 30 18"><path d="M7.5 1C3.9 1 1 4.8 1 9s2.9 8 6.5 8c2.4 0 4.8-2.1 6.5-5.2C15.7 14.9 18.1 17 20.5 17c3.6 0 6.5-3.8 6.5-8s-2.9-8-6.5-8c-2.4 0-4.8 2.1-6.5 5.2C12.3 3.1 9.9 1 7.5 1z" fill="white"/></svg>
                   Meta Ads
                 </span>
                 <span className="flex items-center gap-1.5 text-white text-[11px] font-bold px-3 py-1.5 rounded-full tracking-wide" style={{background:'#4285F4'}}>
@@ -351,7 +360,7 @@ export default function Home() {
       <section id="servicos" className="bg-[#f0f4ff] py-24 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6">
-            <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Serviços</span>
+            <span className="inline-block bg-[#1d4ed8] text-white text-sm font-bold tracking-widest uppercase px-5 py-2 rounded-full">Serviços</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-4 leading-tight">
             Especializados para<br/><span className="text-[#1d4ed8]">impulsionar seu negócio</span>
@@ -401,29 +410,22 @@ export default function Home() {
 
       {/* PARA QUEM */}
       <section className="bg-white py-24 px-5 sm:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-14">Para quem são os meus serviços</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+          <div className="flex flex-col gap-4">
             {[
-              { bg:'linear-gradient(135deg,#1d4ed8,#3b82f6)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><circle cx="15" cy="10" r="5"/><path d="M5 28c0-5.523 4.477-10 10-10s10 4.477 10 10" strokeLinecap="round"/><path d="M24 4v8M20 8h8" strokeLinecap="round"/></svg>, text:'Precisa adquirir novos clientes' },
-              { bg:'linear-gradient(135deg,#f97316,#fb923c)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><circle cx="24" cy="7" r="3"/><circle cx="8" cy="16" r="3"/><circle cx="24" cy="25" r="3"/><path d="M11 14.5l10-6M11 17.5l10 6" strokeLinecap="round"/></svg>, text:'Quer distribuir conteúdo' },
-              { bg:'linear-gradient(135deg,#16a34a,#22c55e)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><path d="M4 22l7-8 6 6 10-12" strokeLinecap="round" strokeLinejoin="round"/><path d="M4 28h24" strokeLinecap="round"/></svg>, text:'Quer aumentar suas vendas' },
-              { bg:'linear-gradient(135deg,#7c3aed,#a78bfa)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><path d="M5 20V12h6l10-6v20L11 20H5z" strokeLinecap="round" strokeLinejoin="round"/><path d="M23 10.5c2.2 1.6 3.5 4 3.5 5.5s-1.3 3.9-3.5 5.5" strokeLinecap="round"/></svg>, text:'Quer anunciar de forma profissional' },
+              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><circle cx="15" cy="10" r="5"/><path d="M5 28c0-5.523 4.477-10 10-10s10 4.477 10 10" strokeLinecap="round"/><path d="M24 4v8M20 8h8" strokeLinecap="round"/></svg>, text:'Precisa adquirir novos clientes' },
+              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><circle cx="24" cy="7" r="3"/><circle cx="8" cy="16" r="3"/><circle cx="24" cy="25" r="3"/><path d="M11 14.5l10-6M11 17.5l10 6" strokeLinecap="round"/></svg>, text:'Quer distribuir conteúdo' },
+              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><path d="M4 22l7-8 6 6 10-12" strokeLinecap="round" strokeLinejoin="round"/><path d="M4 28h24" strokeLinecap="round"/></svg>, text:'Quer aumentar suas vendas' },
+              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><path d="M5 20V12h6l10-6v20L11 20H5z" strokeLinecap="round" strokeLinejoin="round"/><path d="M23 10c2.2 1.6 3.5 4 3.5 6s-1.3 4.4-3.5 6" strokeLinecap="round"/></svg>, text:'Quer anunciar de forma profissional' },
+              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><path d="M28 10a12 12 0 11-20.8-8" strokeLinecap="round"/><path d="M4 4v6h6" strokeLinecap="round" strokeLinejoin="round"/></svg>, text:'Fez tráfego e obteve resultados ruins' },
+              { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><circle cx="16" cy="16" r="11"/><path d="M16 10v6l4 2" strokeLinecap="round"/></svg>, text:'Não tem tempo de fazer seus próprios anúncios' },
             ].map((item, i) => (
-              <div key={i} className="bg-[#f0f4ff] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:shadow-md transition-all hover:-translate-y-1">
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-sm" style={{background:item.bg}}>{item.icon}</div>
-                <p className="text-[#0d1b3e] font-bold text-sm leading-snug">{item.text}</p>
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[
-              { bg:'linear-gradient(135deg,#dc2626,#f87171)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><path d="M26 10a12 12 0 10-1.5 10" strokeLinecap="round"/><path d="M26 6v6h-6" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 12v4h4" strokeLinecap="round"/></svg>, text:'Fez tráfego e obteve resultados ruins' },
-              { bg:'linear-gradient(135deg,#4f46e5,#818cf8)', icon:<svg className="w-8 h-8" fill="none" viewBox="0 0 32 32" stroke="white" strokeWidth="1.6"><circle cx="16" cy="16" r="11"/><path d="M16 10v6l4 2.5" strokeLinecap="round"/></svg>, text:'Não tem tempo de fazer seus próprios anúncios' },
-            ].map((item, i) => (
-              <div key={i} className="bg-[#f0f4ff] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:shadow-md transition-all hover:-translate-y-1">
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-sm" style={{background:item.bg}}>{item.icon}</div>
-                <p className="text-[#0d1b3e] font-bold text-sm leading-snug">{item.text}</p>
+              <div key={i} className="bg-white rounded-2xl p-5 flex items-center gap-5 border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+                <div className="w-14 h-14 bg-[#eff6ff] rounded-xl flex items-center justify-center flex-shrink-0">
+                  {item.icon}
+                </div>
+                <p className="text-[#0d1b3e] font-bold text-base leading-snug">{item.text}</p>
               </div>
             ))}
           </div>
