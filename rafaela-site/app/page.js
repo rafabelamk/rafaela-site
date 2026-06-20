@@ -134,7 +134,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="flex flex-col leading-tight">
             <span className="text-white font-black text-lg tracking-tight">Rafaela Geiger</span>
-            <span className="text-[#1d4ed8] text-[10px] font-bold tracking-[0.22em] uppercase">Tráfego Pago</span>
+            <span className="text-blue-400 text-[10px] font-bold tracking-[0.22em] uppercase">Tráfego Pago</span>
           </a>
           <div className="hidden md:flex items-center gap-8">
             {[['#servicos','Serviços'],['#metodo','Método ADS'],['#sobre','Sobre'],['#faq','FAQ']].map(([href,label]) => (
@@ -171,7 +171,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-8 h-px bg-[#1d4ed8]"/>
-              <span className="text-[#1d4ed8] text-sm font-bold tracking-[0.18em] uppercase">Meta Ads · Google Ads · Performance</span>
+              <span className="text-blue-400 text-sm font-bold tracking-[0.18em] uppercase">Meta Ads · Google Ads · Performance</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.08] mb-6">
               Transforme investimento em anúncios em <span className="text-blue-400">crescimento real</span> e mensurável.
