@@ -252,7 +252,7 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="relative bg-[#0d1b3e] pt-20 pb-8 sm:pt-28 sm:pb-10 px-5 sm:px-8 overflow-hidden" style={{minHeight:'calc(100vh - 64px)',display:'flex',flexDirection:'column',justifyContent:'center'}}>
+      <section id="home" className="relative bg-[#0d1b3e] pt-24 pb-12 lg:pt-20 lg:pb-8 px-5 sm:px-8 overflow-hidden lg:min-h-[calc(100vh-80px)] lg:flex lg:flex-col lg:justify-center">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-[#1d4ed8]/8 to-transparent pointer-events-none"/>
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#1d4ed8]/5 rounded-full blur-3xl pointer-events-none"/>
         <div className="max-w-6xl mx-auto relative w-full">
@@ -286,15 +286,15 @@ export default function Home() {
                 <a href="#servicos" className="border border-white/25 hover:border-white/50 text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base transition-all hover:bg-white/5">Ver serviços ↓</a>
               </div>
             </div>
-            {/* Mockup: proporcional ao texto */}
+            {/* Mockup desktop */}
             <div className="hidden lg:flex justify-center items-center">
               <div style={{transform:'scale(0.72)',transformOrigin:'center center'}}>
                 <PhoneMockup/>
               </div>
             </div>
-            {/* Mockup mobile: compacto abaixo dos botões */}
-            <div className="flex lg:hidden justify-center items-center overflow-hidden" style={{height:'320px'}}>
-              <div style={{transform:'scale(0.45)',transformOrigin:'center top'}}>
+            {/* Mockup mobile: escala pequena, sem altura fixa que causa espaço vazio */}
+            <div className="flex lg:hidden justify-center items-center" style={{marginTop:'8px'}}>
+              <div style={{transform:'scale(0.52)',transformOrigin:'top center',height:'300px',overflow:'hidden'}}>
                 <PhoneMockup/>
               </div>
             </div>
@@ -562,10 +562,10 @@ export default function Home() {
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que meus <span className="text-[#1d4ed8]">clientes dizem</span></h2>
           </div>
-          {/* Desktop: grid */}
-          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Carrossel universal */}
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
             {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 hover:shadow-md transition-all">
+              <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 snap-start flex-shrink-0" style={{width:'min(340px, calc(100vw - 60px))'}}>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
@@ -577,40 +577,16 @@ export default function Home() {
                   <GoogleBadge/>
                 </div>
                 <div className="flex gap-0.5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
-                <p className="text-gray-600 text-[13px] leading-relaxed flex-1">"{t.text}"</p>
+                <p className="text-gray-600 text-[13px] leading-relaxed">"{t.text}"</p>
               </div>
             ))}
           </div>
-          {/* Mobile: carrossel snap */}
-          <div className="sm:hidden">
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5 scrollbar-hide" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
-              {TESTIMONIALS.map((t, i) => (
-                <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 snap-center flex-shrink-0" style={{width:'calc(100vw - 60px)'}}>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
-                      <div>
-                        <p className="font-black text-[#0d1b3e] text-sm leading-tight">{t.name}</p>
-                        <p className="text-gray-400 text-[11px]">{t.handle}</p>
-                      </div>
-                    </div>
-                    <GoogleBadge/>
-                  </div>
-                  <div className="flex gap-0.5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
-                  <p className="text-gray-600 text-[13px] leading-relaxed">"{t.text}"</p>
-                </div>
-              ))}
-            </div>
-            {/* Dots indicadores */}
-            <div className="flex justify-center gap-1.5 mt-3">
-              {TESTIMONIALS.map((_, i) => (
-                <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#1d4ed8]/30"/>
-              ))}
-            </div>
+          <div className="flex justify-center gap-1.5 mt-3">
+            {TESTIMONIALS.map((_, i) => <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#1d4ed8]/30"/>)}
           </div>
         </div>
       </section>
-
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
       {/* CLIENTES ATENDIDOS */}
       <section className="bg-white py-16 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
@@ -618,33 +594,18 @@ export default function Home() {
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Portfólio</span>
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3">Clientes já atendidos</h2>
           </div>
-          {/* Desktop */}
-          <div className="hidden sm:flex flex-wrap justify-center gap-5">
+          {/* Carrossel universal */}
+          <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
             {LOGOS.map(logo => (
-              <div key={logo.name} className="flex flex-col items-center gap-2">
-                <div className="w-20 h-20 bg-white rounded-[22px] flex items-center justify-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                  <div className="relative w-16 h-16">
-                    <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="64px"/>
+              <div key={logo.name} className="flex flex-col items-center gap-2 snap-center flex-shrink-0">
+                <div className="w-24 h-24 bg-white rounded-[22px] flex items-center justify-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="relative w-20 h-20">
+                    <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="80px"/>
                   </div>
                 </div>
-                <span className="text-gray-500 text-xs font-medium text-center max-w-[80px] leading-tight">{logo.name}</span>
+                <span className="text-gray-500 text-xs font-medium text-center w-24 leading-tight">{logo.name}</span>
               </div>
             ))}
-          </div>
-          {/* Mobile: carrossel */}
-          <div className="sm:hidden">
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
-              {LOGOS.map(logo => (
-                <div key={logo.name} className="flex flex-col items-center gap-2 snap-center flex-shrink-0">
-                  <div className="w-20 h-20 bg-white rounded-[22px] flex items-center justify-center shadow-sm border border-gray-100 overflow-hidden">
-                    <div className="relative w-16 h-16">
-                      <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="64px"/>
-                    </div>
-                  </div>
-                  <span className="text-gray-500 text-xs font-medium text-center w-20 leading-tight">{logo.name}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -657,8 +618,8 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 leading-tight">Especialistas</h2>
             <p className="text-gray-500 mt-4 max-w-xl mx-auto">Tive e tenho a oportunidade única de trabalhar com alguns dos maiores players do digital — gestão de infoprodutos, eventos, lançamentos e perpétuo.</p>
           </div>
-          {/* Desktop: grid */}
-          <div className="hidden sm:flex flex-wrap justify-center gap-6">
+          {/* Carrossel universal */}
+          <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
             {[
               { handle: '@berudolph', file: '/especialistas/berudolph.png' },
               { handle: '@drabelguerra', file: '/especialistas/drabelguerra.png' },
@@ -669,39 +630,21 @@ export default function Home() {
               { handle: '@hyagoilha', file: '/especialistas/hyagoilha.png' },
               { handle: '@flaviarochadepil', file: '/especialistas/flaviarochadepil.png' },
             ].map((e, i) => (
-              <div key={i} className="flex flex-col items-center gap-3">
-                <div className="w-28 h-28 rounded-[24px] overflow-hidden border-2 border-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 relative">
-                  <Image src={e.file} alt={e.handle} fill className="object-cover" sizes="112px"/>
+              <div key={i} className="flex flex-col items-center gap-3 snap-center flex-shrink-0">
+                <div className="w-32 h-32 rounded-[24px] overflow-hidden border-2 border-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 relative">
+                  <Image src={e.file} alt={e.handle} fill className="object-cover" sizes="128px"/>
                 </div>
                 <span className="text-[#0d1b3e] text-sm font-semibold">{e.handle}</span>
               </div>
             ))}
           </div>
-          {/* Mobile: carrossel */}
-          <div className="sm:hidden">
-            <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+        </div>
+      </section>
               {[
                 { handle: '@berudolph', file: '/especialistas/berudolph.png' },
                 { handle: '@drabelguerra', file: '/especialistas/drabelguerra.png' },
                 { handle: '@leandroferrari', file: '/especialistas/leandroferrari.png' },
                 { handle: '@professor_salomao', file: '/especialistas/professorsalomao.png' },
-                { handle: '@wendellcarvalho', file: '/especialistas/wendellcarvalho.png' },
-                { handle: '@anwar.hermuche', file: '/especialistas/anwarhermuche.png' },
-                { handle: '@hyagoilha', file: '/especialistas/hyagoilha.png' },
-                { handle: '@flaviarochadepil', file: '/especialistas/flaviarochadepil.png' },
-              ].map((e, i) => (
-                <div key={i} className="flex flex-col items-center gap-3 snap-center flex-shrink-0">
-                  <div className="w-24 h-24 rounded-[20px] overflow-hidden border-2 border-white shadow-lg relative">
-                    <Image src={e.file} alt={e.handle} fill className="object-cover" sizes="96px"/>
-                  </div>
-                  <span className="text-[#0d1b3e] text-xs font-semibold">{e.handle}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CERTIFICAÇÃO */}
       <section className="bg-white py-24 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
