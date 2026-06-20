@@ -657,14 +657,6 @@ export default function Home() {
                 <p className="text-white text-2xl font-black leading-none">2+</p>
                 <p className="text-white/80 text-xs mt-0.5">anos de experiência</p>
               </div>
-              {/* Pedro Sobral reference image */}
-              <div className="mt-6 rounded-2xl overflow-hidden shadow-md border border-gray-100 relative">
-                <Image src="/pedrosobral.png" alt="Subido de Tráfego - Pedro Sobral" width={800} height={500} className="w-full h-auto object-cover"/>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d1b3e]/85 to-transparent px-5 py-4">
-                  <p className="text-white text-xs font-black uppercase tracking-wider">Subido de Tráfego</p>
-                  <p className="text-white/60 text-xs">Formação por Pedro Sobral</p>
-                </div>
-              </div>
             </div>
             <div className="order-1 md:order-2">
               <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Quem sou eu</span>
@@ -695,6 +687,15 @@ export default function Home() {
               <p className="text-gray-600 leading-relaxed mb-8 text-[15px]">
                 Formação no <strong className="text-[#0d1b3e]">Subido de Tráfego</strong> — metodologia criada por <strong className="text-[#0d1b3e]">Pedro Sobral</strong>, referência nacional em tráfego pago, fundador da Agência 2Gather e CEO do Grupo Permaneo. Comunidade com mais de <strong className="text-[#0d1b3e]">57 mil membros</strong> — a maior do Brasil e possivelmente do mundo.
               </p>
+
+              {/* Pedro Sobral reference image */}
+              <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100 relative mb-8">
+                <Image src="/pedrosobral.png" alt="Subido de Tráfego - Pedro Sobral" width={800} height={400} className="w-full object-cover object-top" style={{height:'180px'}}/>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d1b3e]/85 to-transparent px-5 py-4">
+                  <p className="text-white text-xs font-black uppercase tracking-wider">Subido de Tráfego</p>
+                  <p className="text-white/60 text-xs">Formação por Pedro Sobral</p>
+                </div>
+              </div>
 
               <div className="flex flex-wrap gap-3">
                 <a href={WA} target="_blank" rel="noreferrer"
