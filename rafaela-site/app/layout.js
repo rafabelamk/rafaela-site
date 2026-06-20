@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Meta Ads, Google Ads e LinkedIn Ads para negócios que querem crescer com estratégia e dados reais. Gestora de tráfego pago com mais de 2 anos de experiência e 45+ contas gerenciadas.',
   keywords:
-    'tráfego pago, meta ads, google ads, linkedin ads, gestão de anúncios, Rafaela Geiger, HEBR Tráfego, anúncios online',
+    'tráfego pago, meta ads, google ads, gestão de anúncios, Rafaela Geiger, analista de mídia paga, anúncios online, performance digital',
   openGraph: {
     title: 'Rafaela Geiger — Especialista em Tráfego Pago',
     description:

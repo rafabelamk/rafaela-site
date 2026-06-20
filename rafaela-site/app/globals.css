@@ -100,3 +100,9 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(29, 78, 216, 0.08);
 }
+
+/* Float animation for phone mockup */
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-9px); }
+}
