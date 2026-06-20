@@ -249,9 +249,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="w-8 h-px bg-[#1d4ed8]"/>
-                <span className="text-blue-400 text-sm font-bold tracking-[0.18em] uppercase">Meta Ads · Google Ads · Performance</span>
+                <div className="flex flex-wrap items-center gap-2 mb-6">
+                <span className="text-white text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wide" style={{background:'#0082FB'}}>Meta Ads</span>
+                <span className="text-white text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wide" style={{background:'#4285F4'}}>Google Ads</span>
+                <span className="text-blue-300 text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wide" style={{background:'rgba(255,255,255,0.08)',border:'1px solid rgba(59,130,246,0.3)'}}>Performance</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.08] mb-6">
                 Transforme investimento em anúncios em <span className="text-blue-400">crescimento real</span> e mensurável.
@@ -684,19 +685,6 @@ export default function Home() {
                 ))}
               </div>
 
-              <p className="text-gray-600 leading-relaxed mb-8 text-[15px]">
-                Formação no <strong className="text-[#0d1b3e]">Subido de Tráfego</strong> — metodologia criada por <strong className="text-[#0d1b3e]">Pedro Sobral</strong>, referência nacional em tráfego pago, fundador da Agência 2Gather e CEO do Grupo Permaneo. Comunidade com mais de <strong className="text-[#0d1b3e]">57 mil membros</strong> — a maior do Brasil e possivelmente do mundo.
-              </p>
-
-              {/* Pedro Sobral reference image */}
-              <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100 relative mb-8">
-                <Image src="/pedrosobral.png" alt="Subido de Tráfego - Pedro Sobral" width={800} height={400} className="w-full object-cover object-top" style={{height:'180px'}}/>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d1b3e]/85 to-transparent px-5 py-4">
-                  <p className="text-white text-xs font-black uppercase tracking-wider">Subido de Tráfego</p>
-                  <p className="text-white/60 text-xs">Formação por Pedro Sobral</p>
-                </div>
-              </div>
-
               <div className="flex flex-wrap gap-3">
                 <a href={WA} target="_blank" rel="noreferrer"
                    className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
@@ -706,6 +694,28 @@ export default function Home() {
                    className="flex items-center gap-2 border border-gray-200 hover:border-[#1d4ed8] text-gray-600 hover:text-[#1d4ed8] px-6 py-3 rounded-full font-semibold text-sm transition-all">
                   <IconLI className="w-4 h-4"/> LinkedIn
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SUBIDO DE TRÁFEGO */}
+      <section className="bg-white py-20 px-5 sm:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Formação</span>
+              <h3 className="text-3xl md:text-4xl font-black text-[#0d1b3e] mt-3 mb-5 leading-tight">Subido de Tráfego</h3>
+              <p className="text-gray-600 leading-relaxed text-[15px]">
+                Formação no <strong className="text-[#0d1b3e]">Subido de Tráfego</strong> — metodologia criada por <strong className="text-[#0d1b3e]">Pedro Sobral</strong>, referência nacional em tráfego pago, fundador da Agência 2Gather e CEO do Grupo Permaneo. Comunidade com mais de <strong className="text-[#0d1b3e]">57 mil membros</strong> — a maior do Brasil e possivelmente do mundo.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 relative">
+              <Image src="/pedrosobral.png" alt="Subido de Tráfego - Pedro Sobral" width={800} height={500} className="w-full h-auto object-cover"/>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d1b3e]/85 to-transparent px-5 py-4">
+                <p className="text-white text-xs font-black uppercase tracking-wider">Subido de Tráfego</p>
+                <p className="text-white/60 text-xs">Formação por Pedro Sobral</p>
               </div>
             </div>
           </div>

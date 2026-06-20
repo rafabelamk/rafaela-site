@@ -3,13 +3,13 @@ import './globals.css'
 export const metadata = {
   title: 'Rafaela Geiger — Especialista em Tráfego Pago',
   description:
-    'Meta Ads, Google Ads e LinkedIn Ads para negócios que querem crescer com estratégia e dados reais. Gestora de tráfego pago com mais de 2 anos de experiência e 45+ contas gerenciadas.',
+    'Gestora de tráfego e analista de mídia paga e performance. Ajudo negócios locais, infoprodutores e marcas a crescerem de forma previsível com estratégia, dados e otimização contínua.',
   keywords:
     'tráfego pago, meta ads, google ads, gestão de anúncios, Rafaela Geiger, analista de mídia paga, anúncios online, performance digital',
   openGraph: {
     title: 'Rafaela Geiger — Especialista em Tráfego Pago',
     description:
-      'Transforme investimento em anúncios em crescimento real e mensurável. Meta Ads, Google Ads e LinkedIn Ads.',
+      'Transforme investimento em anúncios em crescimento real e mensurável.',
     type: 'website',
     locale: 'pt_BR',
   },
