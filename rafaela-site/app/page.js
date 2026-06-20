@@ -640,11 +640,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-              {[
-                { handle: '@berudolph', file: '/especialistas/berudolph.png' },
-                { handle: '@drabelguerra', file: '/especialistas/drabelguerra.png' },
-                { handle: '@leandroferrari', file: '/especialistas/leandroferrari.png' },
-                { handle: '@professor_salomao', file: '/especialistas/professorsalomao.png' },
       {/* CERTIFICAÇÃO */}
       <section className="bg-white py-24 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
