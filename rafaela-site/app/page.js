@@ -114,11 +114,17 @@ export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openFAQ, setOpenFAQ] = useState(null)
   const [scrolled, setScrolled] = useState(false)
+  const [activeT, setActiveT] = useState(0)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const timer = setInterval(() => setActiveT(p => (p + 1) % TESTIMONIALS.length), 4500)
+    return () => clearInterval(timer)
   }, [])
 
   return (
@@ -251,12 +257,16 @@ export default function Home() {
           <p className="text-gray-500 text-center mb-14 max-w-xl mx-auto">Gestão completa nas plataformas que mais convertem, com estratégia e dados reais.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div className="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 border border-gray-100">
-              <div className="mb-5 w-16 h-16 bg-[#f0f4ff] rounded-2xl flex items-center justify-center"><IconMeta/></div>
+              <div className="mb-5 w-16 h-16 rounded-2xl flex items-center justify-center" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+                <IconIG className="w-8 h-8 text-white"/>
+              </div>
               <span className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1">Tráfego Pago</span>
               <h3 className="text-[#0d1b3e] font-black text-lg leading-tight">Instagram Ads e Facebook Ads</h3>
             </div>
             <div className="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 border border-gray-100">
-              <div className="mb-5 w-16 h-16 bg-[#f0f4ff] rounded-2xl flex items-center justify-center"><IconGoogleAds/></div>
+              <div className="mb-5 w-16 h-16 bg-white rounded-2xl border-2 border-gray-100 flex items-center justify-center shadow-sm">
+                <svg className="w-9 h-9" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              </div>
               <span className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1">Tráfego Pago</span>
               <h3 className="text-[#0d1b3e] font-black text-lg leading-tight">Google Ads</h3>
             </div>
@@ -365,16 +375,14 @@ export default function Home() {
               Criativos para os mais diversos nichos: Salão de Beleza, Plano de Saúde, Engenheiro Civil, Imobiliária, Clínica de Estética, Loja de Importados, e muito mais.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
-            {CRIATIVOS.map((src, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 aspect-square relative">
-                <Image src={src} alt={`Criativo ${i + 1}`} fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"/>
-              </div>
-            ))}
-            {/* 8th slot: CTA card */}
-            <div className="rounded-2xl bg-[#0d1b3e] border border-[#1d4ed8]/30 flex flex-col items-center justify-center text-center p-6 aspect-square hover:bg-[#1d4ed8]/10 transition-all">
-              <p className="text-white font-black text-lg leading-tight mb-3">Quer criativos assim para o seu negócio?</p>
-              <a href={WA} target="_blank" rel="noreferrer" className="text-[#1d4ed8] text-sm font-bold underline underline-offset-2">Fale comigo →</a>
+          {/* Marquee carousel */}
+          <div className="overflow-hidden mb-10 -mx-5 sm:-mx-8 px-5 sm:px-8">
+            <div className="marquee-inner">
+              {[...CRIATIVOS, ...CRIATIVOS].map((src, i) => (
+                <div key={i} className="flex-shrink-0 w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden relative shadow-sm">
+                  <Image src={src} alt={`Criativo ${(i % CRIATIVOS.length) + 1}`} fill className="object-cover" sizes="192px"/>
+                </div>
+              ))}
             </div>
           </div>
           {/* 75% stat */}
@@ -394,23 +402,29 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que meus <span className="text-[#1d4ed8]">clientes dizem</span></h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 flex flex-col items-center text-center border border-gray-100 hover:shadow-lg transition-all duration-200">
-                <div className="flex gap-1 mb-5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
-                <p className="text-gray-600 leading-relaxed mb-8 text-[15px] italic">"{t.text}"</p>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-black text-base" style={{backgroundColor: t.color}}>{t.initials}</div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white flex items-center justify-center shadow-md"><GoogleBadge/></div>
-                  </div>
-                  <div>
-                    <p className="font-black text-[#0d1b3e] text-sm">{t.name}</p>
-                    <p className="text-gray-400 text-xs">{t.handle}</p>
-                  </div>
+          {/* Carousel */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 sm:p-10 flex flex-col items-center text-center border border-gray-100 shadow-sm min-h-[280px] justify-between">
+              <div className="flex gap-1 mb-5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
+              <p className="text-gray-600 leading-relaxed mb-8 text-[15px] italic flex-1">"{TESTIMONIALS[activeT].text}"</p>
+              <div className="flex flex-col items-center gap-2">
+                <div className="relative">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-black text-base" style={{backgroundColor: TESTIMONIALS[activeT].color}}>{TESTIMONIALS[activeT].initials}</div>
+                  <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white flex items-center justify-center shadow-md"><GoogleBadge/></div>
+                </div>
+                <div>
+                  <p className="font-black text-[#0d1b3e] text-sm">{TESTIMONIALS[activeT].name}</p>
+                  <p className="text-gray-400 text-xs">{TESTIMONIALS[activeT].handle}</p>
                 </div>
               </div>
-            ))}
+            </div>
+            {/* Dots */}
+            <div className="flex justify-center gap-2 mt-5">
+              {TESTIMONIALS.map((_, i) => (
+                <button key={i} onClick={() => setActiveT(i)}
+                  className={`rounded-full transition-all duration-300 ${i === activeT ? 'w-6 h-2.5 bg-[#1d4ed8]' : 'w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400'}`}/>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -422,12 +436,15 @@ export default function Home() {
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Portfólio</span>
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3">Clientes já atendidos</h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {LOGOS.map(logo => (
-              <div key={logo.name} className="bg-white rounded-2xl p-5 flex items-center justify-center aspect-square shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100">
-                <div className="relative w-full h-full">
-                  <Image src={logo.file} alt={logo.name} fill className="object-contain p-2" sizes="(max-width: 640px) 40vw, 20vw"/>
+              <div key={logo.name} className="flex flex-col items-center gap-2">
+                <div className="w-20 h-20 bg-white rounded-[22px] flex items-center justify-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="relative w-16 h-16">
+                    <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="64px"/>
+                  </div>
                 </div>
+                <span className="text-gray-500 text-xs font-medium text-center max-w-[80px] leading-tight">{logo.name}</span>
               </div>
             ))}
           </div>
@@ -442,8 +459,24 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 leading-tight">Especialistas que já fiz/<br/>faço parte do time de tráfego</h2>
             <p className="text-gray-500 mt-4 max-w-xl mx-auto">Tive e tenho a oportunidade única de trabalhar com alguns dos maiores players do digital — gestão de infoprodutos, eventos, lançamentos e perpétuo.</p>
           </div>
-          <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100">
-            <Image src="/especialistas.png" alt="Especialistas" width={1200} height={600} className="w-full h-auto" style={{objectFit:'contain'}}/>
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { handle: '@berudolph', file: '/especialistas/berudolph.png' },
+              { handle: '@drabelguerra', file: '/especialistas/drabelguerra.png' },
+              { handle: '@leandroferrari', file: '/especialistas/leandroferrari.png' },
+              { handle: '@professor_salomao', file: '/especialistas/professorsalomao.png' },
+              { handle: '@wendellcarvalho', file: '/especialistas/wendellcarvalho.png' },
+              { handle: '@anwar.hermuche', file: '/especialistas/anwarhermuche.png' },
+              { handle: '@hyagoilha', file: '/especialistas/hyagoilha.png' },
+              { handle: '@flaviarochadepil', file: '/especialistas/flaviarochadepil.png' },
+            ].map((e, i) => (
+              <div key={i} className="flex flex-col items-center gap-3">
+                <div className="w-28 h-28 rounded-[24px] overflow-hidden border-2 border-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 relative">
+                  <Image src={e.file} alt={e.handle} fill className="object-cover" sizes="112px"/>
+                </div>
+                <span className="text-[#0d1b3e] text-sm font-semibold">{e.handle}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -525,35 +558,6 @@ export default function Home() {
                    className="flex items-center gap-2 border border-gray-200 hover:border-[#1d4ed8] text-gray-600 hover:text-[#1d4ed8] px-6 py-3 rounded-full font-semibold text-sm transition-all">
                   <IconLI className="w-4 h-4"/> LinkedIn
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INDICAÇÕES */}
-      <section className="bg-white py-24 px-5 sm:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center order-2 md:order-1">
-              <Image src="/computador.png" alt="Indicações para parceria" width={520} height={420} className="w-full max-w-md h-auto object-contain"/>
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-black text-[#0d1b3e] mb-8 leading-tight">
-                Indicações para fazermos uma <span className="text-[#1d4ed8]">ótima parceria</span> para ambos
-              </h2>
-              <div className="space-y-4">
-                {INDICACOES.map((item, i) => (
-                  <div key={i} className="bg-[#0d1b3e] rounded-2xl p-6 flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#1d4ed8] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-white font-black text-base mb-1">{item.title}</h3>
-                      <p className="text-gray-300 text-sm leading-relaxed">{item.text}</p>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
