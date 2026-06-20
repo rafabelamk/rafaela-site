@@ -586,7 +586,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
+
       {/* CLIENTES ATENDIDOS */}
       <section className="bg-white py-16 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
