@@ -1,0 +1,37 @@
+import './globals.css'
+
+export const metadata = {
+  title: 'Rafaela Geiger — Especialista em Tráfego Pago',
+  description:
+    'Meta Ads, Google Ads e LinkedIn Ads para negócios que querem crescer com estratégia e dados reais. Gestora de tráfego pago com mais de 2 anos de experiência e 45+ contas gerenciadas.',
+  keywords:
+    'tráfego pago, meta ads, google ads, linkedin ads, gestão de anúncios, Rafaela Geiger, HEBR Tráfego, anúncios online',
+  openGraph: {
+    title: 'Rafaela Geiger — Especialista em Tráfego Pago',
+    description:
+      'Transforme investimento em anúncios em crescimento real e mensurável. Meta Ads, Google Ads e LinkedIn Ads.',
+    type: 'website',
+    locale: 'pt_BR',
+  },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="pt-BR">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}
