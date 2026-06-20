@@ -130,7 +130,7 @@ export default function Home() {
   return (
     <>
       {/* NAVBAR */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#0d1b3e]/96 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-transparent'}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-[#0d1b3e] ${scrolled ? 'shadow-lg shadow-black/20' : ''}`}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="flex flex-col leading-tight">
             <span className="text-white font-black text-lg tracking-tight">Rafaela Geiger</span>
@@ -174,7 +174,7 @@ export default function Home() {
               <span className="text-[#1d4ed8] text-sm font-bold tracking-[0.18em] uppercase">Meta Ads · Google Ads · Performance</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.08] mb-6">
-              Transforme investimento em anúncios em <span className="text-[#1d4ed8]">crescimento real</span> e mensurável.
+              Transforme investimento em anúncios em <span className="text-blue-400">crescimento real</span> e mensurável.
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
               Sou Rafaela Geiger, gestora de tráfego e analista de mídia paga e performance. Ajudo negócios locais, infoprodutores e marcas a crescerem de forma previsível com estratégia, dados e otimização contínua.
@@ -322,6 +322,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* O QUE EU ENTREGO */}
+      <section className="bg-[#060f22] py-24 px-5 sm:px-8 relative overflow-hidden">
+        {/* Watermark background */}
+        <div className="absolute inset-0 overflow-hidden select-none pointer-events-none">
+          {Array.from({length: 12}).map((_, i) => (
+            <div key={i} className="whitespace-nowrap text-white font-black tracking-widest py-1 opacity-[0.04]"
+                 style={{fontSize:'4rem', transform: `translateX(${i % 2 === 0 ? '0%' : '-8%'})`}}>
+              {'RAFAELA GEIGER RAFAELA GEIGER RAFAELA GEIGER RAFAELA GEIGER '}
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-4xl mx-auto relative">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-14 leading-tight">
+            O que eu <span className="text-blue-400">entrego?</span>
+          </h2>
+
+          {[
+            { num: '01', title: 'Tráfego Pago — Meta Ads', sub: 'Campanhas estratégicas no Facebook e Instagram com foco em geração de leads, conversão e crescimento de base.' },
+            { num: '02', title: 'Tráfego Pago — Google Ads', sub: 'Anúncios na rede de pesquisa e display para capturar intenção de compra no momento certo.' },
+            { num: '03', title: 'Criativos de Ads', sub: 'Imagens estratégicas com prévia pesquisa de mercado, focadas na dor/benefício do cliente e elaboradas para converter.' },
+            { num: '04', title: 'Consultoria em Tráfego Pago', sub: 'Diagnóstico estratégico completo do seu negócio digital com plano de ação personalizado.' },
+            { num: '05', title: 'Relatórios & Análise de Performance', sub: 'Relatórios periódicos documentando KPIs, CPL, ROAS e progressão histórica de resultados — para acompanhamento e tomada de decisão com dados reais.' },
+          ].map((item, i, arr) => (
+            <div key={i} className={`flex items-start gap-5 py-7 group cursor-default transition-all ${i < arr.length - 1 ? 'border-b border-white/10 hover:border-white/25' : ''}`}>
+              <span className="text-gray-600 text-sm font-bold w-8 flex-shrink-0 pt-1">{item.num}</span>
+              <svg className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5 group-hover:text-blue-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+              <div className="flex-1">
+                <h3 className="text-white font-black text-xl md:text-2xl mb-1.5 group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                <p className="text-gray-400 text-[15px] leading-relaxed">{item.sub}</p>
+              </div>
+              <svg className="w-5 h-5 text-gray-700 flex-shrink-0 mt-1 group-hover:text-blue-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* MÉTODO ADS */}
       <section id="metodo" className="bg-[#0d1b3e] py-24 px-5 sm:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_#1d4ed8_0%,_transparent_55%)] opacity-10 pointer-events-none"/>
@@ -333,7 +374,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {METHODOLOGY.map((step, i) => (
-              <div key={step.num} className="group relative bg-white/5 border border-white/10 hover:border-[#1d4ed8]/50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20">
+              <div key={step.num} className="group relative bg-white/10 border border-white/20 hover:border-[#1d4ed8]/60 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20">
                 {i < 2 && (
                   <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
                     <div className="w-6 h-6 bg-[#1d4ed8] rounded-full flex items-center justify-center">
@@ -342,13 +383,13 @@ export default function Home() {
                   </div>
                 )}
                 <div className="flex items-start justify-between mb-5">
-                  <span className="text-7xl font-black text-white/8 group-hover:text-[#1d4ed8]/20 transition-colors leading-none select-none">{step.num}</span>
+                  <span className="text-7xl font-black text-white/30 group-hover:text-[#1d4ed8]/50 transition-colors leading-none select-none">{step.num}</span>
                   <span className="text-3xl">{step.emoji}</span>
                 </div>
                 <h3 className="text-3xl font-black text-white mb-3">{step.title}</h3>
-                <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">{step.desc}</p>
-                <div className="border-t border-white/10 pt-5">
-                  <p className="text-[#1d4ed8] text-xs font-semibold leading-relaxed">{step.detail}</p>
+                <p className="text-gray-200 leading-relaxed mb-6 text-[15px]">{step.desc}</p>
+                <div className="border-t border-white/20 pt-5">
+                  <p className="text-blue-300 text-xs font-semibold leading-relaxed">{step.detail}</p>
                 </div>
               </div>
             ))}
