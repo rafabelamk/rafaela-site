@@ -169,13 +169,13 @@ function PhoneMockup() {
         </div>
       </div>
       {/* Story ring: perfil Instagram */}
-      <div style={{position:'absolute',left:'0px',top:'75px',zIndex:10,display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',animation:'floatIcon 3.8s ease-in-out infinite',animationDelay:'0.4s'}}>
-        <div style={{width:'76px',height:'76px',borderRadius:'50%',background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',padding:'3px',boxShadow:'0 8px 28px rgba(0,0,0,0.3)'}}>
+      <div style={{position:'absolute',left:'-10px',top:'55px',zIndex:10,display:'flex',flexDirection:'column',alignItems:'center',gap:'6px',animation:'floatIcon 3.8s ease-in-out infinite',animationDelay:'0.4s'}}>
+        <div style={{width:'110px',height:'110px',borderRadius:'50%',background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',padding:'3px',boxShadow:'0 8px 28px rgba(0,0,0,0.3)'}}>
           <div style={{width:'100%',height:'100%',borderRadius:'50%',border:'3px solid #0d1b3e',overflow:'hidden'}}>
-            <Image src="/foto-perfil.png" alt="Rafaela Geiger" width={76} height={76} style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
+            <Image src="/foto-perfil.png" alt="Rafaela Geiger" width={110} height={110} style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
           </div>
         </div>
-        <span style={{color:'rgba(255,255,255,0.6)',fontSize:'8px',fontWeight:'600',letterSpacing:'0.02em'}}>@arafaelageiger</span>
+        <span style={{color:'rgba(255,255,255,0.6)',fontSize:'9px',fontWeight:'600',letterSpacing:'0.02em'}}>@arafaelageiger</span>
       </div>
       {/* Badge 1: novo lead */}
       <div style={{position:'absolute',top:'68px',right:'0',background:'white',borderRadius:'14px',padding:'9px 12px',boxShadow:'0 12px 36px rgba(0,0,0,0.14)',display:'flex',alignItems:'center',gap:'9px',animation:'floatIcon 3s ease-in-out infinite',zIndex:10}}>
@@ -286,7 +286,7 @@ export default function Home() {
                 <a href="#servicos" className="border border-white/25 hover:border-white/50 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:bg-white/5">Ver serviços ↓</a>
               </div>
             </div>
-            <div className="hidden lg:flex justify-center items-center">
+            <div className="flex justify-center items-center mt-4 lg:mt-0" style={{transform:'scale(0.78)',transformOrigin:'center top'}}>
               <PhoneMockup/>
             </div>
           </div>
@@ -663,7 +663,7 @@ export default function Home() {
       </section>
 
       {/* SOBRE */}
-      <section id="sobre" className="bg-[#f0f4ff] py-24 px-5 sm:px-8">
+      <section id="sobre" className="bg-[#f0f4ff] pt-24 pb-10 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div className="relative order-2 md:order-1">
@@ -725,7 +725,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="bg-[#f0f4ff] py-24 px-5 sm:px-8">
+      <section id="faq" className="bg-[#f0f4ff] py-14 px-5 sm:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Dúvidas frequentes</span>
