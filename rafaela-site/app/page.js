@@ -252,7 +252,7 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="relative bg-[#0d1b3e] pt-20 pb-10 lg:pt-16 lg:pb-8 px-5 sm:px-8 overflow-hidden lg:min-h-[calc(100vh-80px)] lg:flex lg:flex-col lg:justify-center">
+      <section id="home" className="relative bg-[#0d1b3e] pt-20 pb-10 lg:pt-8 lg:pb-8 px-5 sm:px-8 overflow-hidden lg:min-h-[calc(100vh-80px)] lg:flex lg:flex-col lg:justify-center">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-[#1d4ed8]/8 to-transparent pointer-events-none"/>
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#1d4ed8]/5 rounded-full blur-3xl pointer-events-none"/>
         <div className="max-w-6xl mx-auto relative w-full">
