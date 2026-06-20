@@ -252,13 +252,13 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="relative bg-[#0d1b3e] pt-24 pb-12 sm:pt-36 sm:pb-20 px-5 sm:px-8 overflow-hidden">
+      <section id="home" className="relative bg-[#0d1b3e] pt-20 pb-8 sm:pt-28 sm:pb-10 px-5 sm:px-8 overflow-hidden" style={{minHeight:'calc(100vh - 64px)',display:'flex',flexDirection:'column',justifyContent:'center'}}>
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-[#1d4ed8]/8 to-transparent pointer-events-none"/>
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#1d4ed8]/5 rounded-full blur-3xl pointer-events-none"/>
-        <div className="max-w-6xl mx-auto relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="max-w-6xl mx-auto relative w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             <div>
-              <div className="flex flex-wrap items-center gap-2 mb-5">
+              <div className="flex flex-wrap items-center gap-2 mb-4">
                 <span className="flex items-center gap-1.5 text-white text-[11px] font-bold px-3 py-1.5 rounded-full tracking-wide" style={{background:'#0082FB'}}>
                   <svg style={{width:'15px',height:'9px',flexShrink:0,display:'block'}} viewBox="0 0 30 18"><path d="M7.5 1C3.9 1 1 4.8 1 9s2.9 8 6.5 8c2.4 0 4.8-2.1 6.5-5.2C15.7 14.9 18.1 17 20.5 17c3.6 0 6.5-3.8 6.5-8s-2.9-8-6.5-8c-2.4 0-4.8 2.1-6.5 5.2C12.3 3.1 9.9 1 7.5 1z" fill="white"/></svg>
                   Meta Ads
@@ -272,28 +272,34 @@ export default function Home() {
                   Performance
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-[1.08] mb-5">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-[1.08] mb-4">
                 Transforme investimento em anúncios em <span className="text-blue-400">crescimento real</span> e mensurável.
               </h1>
-              <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-7 max-w-2xl">
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-w-xl">
                 Sou Rafaela Geiger, gestora de tráfego e analista de mídia paga e performance. Ajudo negócios locais, infoprodutores e marcas a crescerem de forma previsível com estratégia, dados e otimização contínua.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href={WA} target="_blank" rel="noreferrer"
-                   className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-7 py-3.5 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/40">
+                   className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/40">
                   <IconWA className="w-5 h-5"/> Quero uma análise gratuita
                 </a>
-                <a href="#servicos" className="border border-white/25 hover:border-white/50 text-white px-7 py-3.5 rounded-full font-semibold text-base sm:text-lg transition-all hover:bg-white/5">Ver serviços ↓</a>
+                <a href="#servicos" className="border border-white/25 hover:border-white/50 text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base transition-all hover:bg-white/5">Ver serviços ↓</a>
               </div>
             </div>
-            {/* Mockup: menor no mobile com overflow controlado */}
-            <div className="flex justify-center items-start overflow-hidden" style={{height:'440px'}}>
-              <div style={{transform:'scale(0.58)',transformOrigin:'center top'}}>
+            {/* Mockup: proporcional ao texto */}
+            <div className="hidden lg:flex justify-center items-center">
+              <div style={{transform:'scale(0.72)',transformOrigin:'center center'}}>
+                <PhoneMockup/>
+              </div>
+            </div>
+            {/* Mockup mobile: compacto abaixo dos botões */}
+            <div className="flex lg:hidden justify-center items-center overflow-hidden" style={{height:'320px'}}>
+              <div style={{transform:'scale(0.45)',transformOrigin:'center top'}}>
                 <PhoneMockup/>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 sm:mt-20 pt-10 sm:pt-12 border-t border-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-8 pt-8 border-t border-white/10">
             {STATS.map(s => (
               <div key={s.label} className="flex flex-col gap-2">
                 {s.icon ? (
@@ -519,13 +525,13 @@ export default function Home() {
       {/* PORTFÓLIO DE CRIATIVOS */}
       <section className="bg-white py-24 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-12 text-center">
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">A Alma dos Anúncios</span>
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 mb-5">Portfólio de Criativos</h2>
-            <p className="text-gray-600 leading-relaxed max-w-3xl text-[15px]">
+            <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-[15px]">
               <strong className="text-[#0d1b3e]">Criativos estratégicos com prévia pesquisa de mercado do nicho do cliente, focados na dor/benefício do cliente, com gancho, corpo e CTA sendo exclusivamente elaborados para atrair potenciais leads.</strong> Criativos são a mídia dos anúncios, sua propaganda na internet — elaborados em formato de imagem para feed e stories (Instagram e/ou Facebook).
             </p>
-            <p className="text-gray-400 mt-3 max-w-3xl text-sm">
+            <p className="text-gray-400 mt-3 max-w-3xl mx-auto text-sm">
               Criativos para os mais diversos nichos: Salão de Beleza, Plano de Saúde, Engenheiro Civil, Imobiliária, Clínica de Estética, Loja de Importados, e muito mais.
             </p>
           </div>
@@ -551,15 +557,15 @@ export default function Home() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="bg-[#f0f4ff] py-24 px-5 sm:px-8">
+      <section className="bg-[#f0f4ff] py-16 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que meus <span className="text-[#1d4ed8]">clientes dizem</span></h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Desktop: grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {TESTIMONIALS.map((t, i) => (
               <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 hover:shadow-md transition-all">
-                {/* Header: avatar + nome + badge G */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
@@ -570,24 +576,50 @@ export default function Home() {
                   </div>
                   <GoogleBadge/>
                 </div>
-                {/* Estrelas */}
                 <div className="flex gap-0.5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
-                {/* Texto */}
                 <p className="text-gray-600 text-[13px] leading-relaxed flex-1">"{t.text}"</p>
               </div>
             ))}
+          </div>
+          {/* Mobile: carrossel snap */}
+          <div className="sm:hidden">
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5 scrollbar-hide" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+              {TESTIMONIALS.map((t, i) => (
+                <div key={i} className="bg-white rounded-2xl p-5 flex flex-col gap-3 shadow-sm border border-gray-100 snap-center flex-shrink-0" style={{width:'calc(100vw - 60px)'}}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style={{backgroundColor: t.color}}>{t.initials}</div>
+                      <div>
+                        <p className="font-black text-[#0d1b3e] text-sm leading-tight">{t.name}</p>
+                        <p className="text-gray-400 text-[11px]">{t.handle}</p>
+                      </div>
+                    </div>
+                    <GoogleBadge/>
+                  </div>
+                  <div className="flex gap-0.5">{[...Array(5)].map((_, s) => <Star key={s}/>)}</div>
+                  <p className="text-gray-600 text-[13px] leading-relaxed">"{t.text}"</p>
+                </div>
+              ))}
+            </div>
+            {/* Dots indicadores */}
+            <div className="flex justify-center gap-1.5 mt-3">
+              {TESTIMONIALS.map((_, i) => (
+                <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#1d4ed8]/30"/>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CLIENTES ATENDIDOS */}
-      <section className="bg-white py-24 px-5 sm:px-8">
+      <section className="bg-white py-16 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Portfólio</span>
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3">Clientes já atendidos</h2>
           </div>
-          <div className="flex flex-wrap justify-center gap-5">
+          {/* Desktop */}
+          <div className="hidden sm:flex flex-wrap justify-center gap-5">
             {LOGOS.map(logo => (
               <div key={logo.name} className="flex flex-col items-center gap-2">
                 <div className="w-20 h-20 bg-white rounded-[22px] flex items-center justify-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
@@ -599,18 +631,34 @@ export default function Home() {
               </div>
             ))}
           </div>
+          {/* Mobile: carrossel */}
+          <div className="sm:hidden">
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+              {LOGOS.map(logo => (
+                <div key={logo.name} className="flex flex-col items-center gap-2 snap-center flex-shrink-0">
+                  <div className="w-20 h-20 bg-white rounded-[22px] flex items-center justify-center shadow-sm border border-gray-100 overflow-hidden">
+                    <div className="relative w-16 h-16">
+                      <Image src={logo.file} alt={logo.name} fill className="object-contain" sizes="64px"/>
+                    </div>
+                  </div>
+                  <span className="text-gray-500 text-xs font-medium text-center w-20 leading-tight">{logo.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ESPECIALISTAS */}
-      <section className="bg-[#f0f4ff] py-24 px-5 sm:px-8">
+      <section className="bg-[#f0f4ff] py-16 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Experiência</span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 leading-tight">Especialistas que já fiz/<br/>faço parte do time de tráfego</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 leading-tight">Especialistas</h2>
             <p className="text-gray-500 mt-4 max-w-xl mx-auto">Tive e tenho a oportunidade única de trabalhar com alguns dos maiores players do digital — gestão de infoprodutos, eventos, lançamentos e perpétuo.</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-6">
+          {/* Desktop: grid */}
+          <div className="hidden sm:flex flex-wrap justify-center gap-6">
             {[
               { handle: '@berudolph', file: '/especialistas/berudolph.png' },
               { handle: '@drabelguerra', file: '/especialistas/drabelguerra.png' },
@@ -628,6 +676,28 @@ export default function Home() {
                 <span className="text-[#0d1b3e] text-sm font-semibold">{e.handle}</span>
               </div>
             ))}
+          </div>
+          {/* Mobile: carrossel */}
+          <div className="sm:hidden">
+            <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" style={{scrollbarWidth:'none',msOverflowStyle:'none'}}>
+              {[
+                { handle: '@berudolph', file: '/especialistas/berudolph.png' },
+                { handle: '@drabelguerra', file: '/especialistas/drabelguerra.png' },
+                { handle: '@leandroferrari', file: '/especialistas/leandroferrari.png' },
+                { handle: '@professor_salomao', file: '/especialistas/professorsalomao.png' },
+                { handle: '@wendellcarvalho', file: '/especialistas/wendellcarvalho.png' },
+                { handle: '@anwar.hermuche', file: '/especialistas/anwarhermuche.png' },
+                { handle: '@hyagoilha', file: '/especialistas/hyagoilha.png' },
+                { handle: '@flaviarochadepil', file: '/especialistas/flaviarochadepil.png' },
+              ].map((e, i) => (
+                <div key={i} className="flex flex-col items-center gap-3 snap-center flex-shrink-0">
+                  <div className="w-24 h-24 rounded-[20px] overflow-hidden border-2 border-white shadow-lg relative">
+                    <Image src={e.file} alt={e.handle} fill className="object-cover" sizes="96px"/>
+                  </div>
+                  <span className="text-[#0d1b3e] text-xs font-semibold">{e.handle}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
