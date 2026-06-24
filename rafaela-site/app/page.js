@@ -273,10 +273,10 @@ export default function Home() {
                 </span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-[1.08] mb-4">
-                Transforme investimento em anúncios em <span className="text-blue-400">crescimento real</span> e mensurável.
+                Transforme cliques em leads, vendas e <span className="text-blue-400">crescimento real e mensurável.</span>
               </h1>
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-w-xl">
-                Sou Rafaela Geiger, gestora de tráfego e analista de mídia paga e performance. Ajudo negócios locais, infoprodutores e marcas a crescerem de forma previsível com estratégia, dados e otimização contínua.
+                Sou Rafaela Geiger, gestora de tráfego e analista de mídia paga e performance. Impulsiono negócios locais, digitais e marcas a crescerem de forma previsível com estratégia, dados e otimização contínua.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href={WA} target="_blank" rel="noreferrer"
