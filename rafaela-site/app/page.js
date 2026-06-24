@@ -152,7 +152,7 @@ function PhoneMockup() {
             {/* Mini chart */}
             <div style={{borderRadius:'16px',padding:'12px',flex:1,background:'rgba(29,78,216,0.1)',border:'1px solid rgba(29,78,216,0.18)',boxSizing:'border-box'}}>
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'10px'}}>
-                <span style={{color:'rgba(255,255,255,0.32)',fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.1em'}}>Performance ao vivo</span>
+                <span style={{color:'rgba(255,255,255,0.32)',fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.1em'}}>Performance</span>
                 <div style={{width:'6px',height:'6px',borderRadius:'50%',background:'#4ade80'}}/>
               </div>
               <div style={{display:'flex',alignItems:'flex-end',gap:'4px',height:'44px'}}>
@@ -503,8 +503,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_#1d4ed8_0%,_transparent_55%)] opacity-10 pointer-events-none"/>
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16">
-            <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Como funciona</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3">O <span className="text-[#1d4ed8]">Método ADS</span></h2>
+            <span className="inline-block bg-[#1d4ed8]/20 border border-[#1d4ed8]/40 text-blue-300 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">Como funciona</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-2">O <span className="text-blue-400">Método ADS</span></h2>
             <p className="text-gray-400 mt-4 max-w-xl mx-auto leading-relaxed">Três etapas integradas que transformam investimento em anúncios em clientes reais e mensuráveis.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
