@@ -12,6 +12,7 @@ const STATS = [
   { value: '+R$1M', label: 'Administrados em mídia paga de infoprodutos' },
 ]
 
+
 const CRIATIVOS = [
   '/criativos/criativo1.png',
   '/criativos/criativo2.png',
