@@ -707,7 +707,7 @@ export default function Home() {
       <section className="bg-[#f0f4ff] py-8 sm:py-12 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6 sm:mb-10">
-            <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que os clientes da <span className="text-[#1d4ed8]">InSight dizem</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que os clientes da <span className="text-[#9eff1f]">InSight</span> dizem</h2>
           </div>
           {/* Desktop: grid 4 colunas */}
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
