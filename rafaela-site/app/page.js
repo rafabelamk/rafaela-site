@@ -439,9 +439,9 @@ export default function Home() {
 
         <div className="max-w-3xl mx-auto relative text-center">
           <Image
-            src="/logos/insight-logo-onGreen.png"
+            src="/logos/insight-logo-dark.png"
             alt="InSight"
-            width={310}
+            width={302}
             height={80}
             className="h-9 md:h-12 w-auto object-contain mx-auto mb-6"
           />
