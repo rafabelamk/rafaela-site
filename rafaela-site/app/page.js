@@ -396,7 +396,7 @@ export default function Home() {
       {/* PLATAFORMAS */}
       <section className="bg-white py-8 sm:py-12 px-5 sm:px-8 border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <p className="text-center text-gray-400 text-sm font-semibold uppercase tracking-widest mb-10">Plataformas onde anuncio para o seu negócio</p>
+          <p className="text-center text-gray-400 text-sm font-semibold uppercase tracking-widest mb-10">Plataformas onde a <span className="font-black">InSight</span> anuncia para o seu negócio</p>
           <div className="flex flex-nowrap items-center justify-center gap-4 sm:gap-8 md:gap-16 overflow-x-auto">
             <div className="flex flex-col items-center gap-2 flex-shrink-0">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
@@ -423,6 +423,34 @@ export default function Home() {
               <span className="text-gray-600 text-xs sm:text-sm font-semibold">Google</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* SOBRE A INSIGHT */}
+      <section className="bg-[#0d1b3e] py-12 sm:py-20 px-5 sm:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none select-none opacity-[0.05]">
+          {Array.from({length: 10}).map((_, i) => (
+            <div key={i} className="whitespace-nowrap text-white font-black tracking-widest py-1"
+                 style={{fontSize:'4rem', transform: `translateX(${i % 2 === 0 ? '0%' : '-8%'})`}}>
+              {'INSIGHT INSIGHT INSIGHT INSIGHT INSIGHT '}
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-3xl mx-auto relative text-center">
+          <Image
+            src="/logos/insight-logo.png"
+            alt="InSight"
+            width={310}
+            height={80}
+            className="h-9 md:h-12 w-auto object-contain mx-auto mb-6"
+          />
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-5">
+            A InSight é pra quem quer ter <span className="text-blue-400">tudo à vista</span> e crescer com <span className="text-blue-400">previsibilidade</span>
+          </h2>
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            Metodologia própria de gestão de tráfego pago que une estratégia, dados e execução — sem achismo, sem promessa vazia. Cada real investido tem propósito, cada resultado é mensurável, e cada decisão é orientada por número real, não por intuição.
+          </p>
         </div>
       </section>
 
@@ -599,8 +627,16 @@ export default function Home() {
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 sm:mb-14 leading-tight">
-            O que eu <span className="text-blue-400">entrego?</span>
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 sm:mb-14 leading-tight flex flex-wrap items-center gap-3">
+            <span>O que a</span>
+            <Image
+              src="/logos/insight-logo.png"
+              alt="InSight"
+              width={310}
+              height={80}
+              className="h-10 md:h-14 w-auto object-contain"
+            />
+            <span className="text-blue-400">entrega?</span>
           </h2>
 
           {[
@@ -671,7 +707,7 @@ export default function Home() {
       <section className="bg-[#f0f4ff] py-8 sm:py-12 px-5 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6 sm:mb-10">
-            <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que meus <span className="text-[#1d4ed8]">clientes dizem</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e]">O que os clientes da <span className="text-[#1d4ed8]">InSight dizem</span></h2>
           </div>
           {/* Desktop: grid 4 colunas */}
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
