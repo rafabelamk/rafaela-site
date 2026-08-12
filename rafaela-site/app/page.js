@@ -850,10 +850,38 @@ export default function Home() {
       </section>
 
       {/* SOBRE */}
-      <section id="sobre" className="bg-[#f0f4ff] pt-10 pb-6 sm:pt-16 sm:pb-8 px-5 sm:px-8">
-        <div className="max-w-6xl mx-auto">
+      <section id="sobre" className="bg-[#f0f4ff] pt-10 pb-6 sm:pt-16 sm:pb-8 px-5 sm:px-8 relative overflow-hidden">
+        {/* Watermark background */}
+        <div className="absolute inset-0 overflow-hidden select-none pointer-events-none">
+          {Array.from({length: 12}).map((_, i) => (
+            <div key={i} className="whitespace-nowrap text-[#0d1b3e] font-black tracking-widest py-1 opacity-[0.04]"
+                 style={{fontSize:'4rem', transform: `translateX(${i % 2 === 0 ? '0%' : '-8%'})`}}>
+              {'INSIGHT INSIGHT INSIGHT INSIGHT INSIGHT '}
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-6xl mx-auto relative">
+          <div className="mb-10 sm:mb-14">
+            <span className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-1.5 text-[#0d1b3e] text-xs font-bold uppercase tracking-widest shadow-sm">
+              <svg className="w-3.5 h-3.5 text-[#9eff1f]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"/></svg>
+              Conheça a InSight
+            </span>
+            <h3 className="flex flex-wrap items-center gap-3 text-3xl sm:text-4xl font-black text-[#0d1b3e] mt-4">
+              <span>O rosto por trás da</span>
+              <Image
+                src="/logos/insight-logo-green.png"
+                alt="InSight"
+                width={302}
+                height={80}
+                className="h-8 sm:h-10 w-auto object-contain"
+              />
+            </h3>
+            <div className="w-16 h-1.5 bg-[#0d1b3e] rounded-full mt-4"></div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            <div className="relative order-2 md:order-1">
+            <div className="relative order-2 md:order-1 max-w-xs sm:max-w-sm mx-auto md:mx-0">
               <div className="bg-white rounded-3xl overflow-hidden aspect-[4/5] relative shadow-lg border border-gray-100">
                 <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" priority sizes="(max-width: 768px) 100vw, 50vw"/>
                 <div className="absolute bottom-6 left-6 right-6 bg-[#0d1b3e] rounded-xl p-4">
@@ -894,8 +922,8 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-3">
                 <a href={WA} target="_blank" rel="noreferrer"
-                   className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
-                  <IconWA className="w-4 h-4"/> Quero crescer meus números hoje
+                   className="flex items-center gap-2 bg-[#059669] hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
+                  <IconWA className="w-4 h-4"/> Quero falar com a Rafaela
                 </a>
                 <a href="https://www.instagram.com/arafaelageiger/" target="_blank" rel="noreferrer"
                    className="flex items-center gap-2 border border-gray-200 hover:border-pink-400 text-gray-600 hover:text-pink-500 px-6 py-3 rounded-full font-semibold text-sm transition-all">
