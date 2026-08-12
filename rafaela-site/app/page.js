@@ -481,7 +481,16 @@ export default function Home() {
       {/* PARA QUEM */}
       <section className="bg-white py-10 sm:py-16 px-5 sm:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-6 sm:mb-14">Para quem são os meus serviços</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-6 sm:mb-14 leading-tight flex flex-wrap items-center justify-center gap-3">
+            <span>Para quem é a</span>
+            <Image
+              src="/logos/insight-logo.png"
+              alt="InSight"
+              width={310}
+              height={80}
+              className="h-12 md:h-16 w-auto object-contain"
+            />
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { icon:<svg className="w-7 h-7 text-[#1d4ed8]" fill="none" viewBox="0 0 32 32" stroke="currentColor" strokeWidth="1.8"><circle cx="15" cy="10" r="5"/><path d="M5 28c0-5.523 4.477-10 10-10s10 4.477 10 10" strokeLinecap="round"/><path d="M24 4v8M20 8h8" strokeLinecap="round"/></svg>, text:'Precisa adquirir novos clientes' },
@@ -510,8 +519,8 @@ export default function Home() {
             <Image
               src="/logos/insight-logo.png"
               alt="InSight"
-              width={344}
-              height={100}
+              width={310}
+              height={80}
               className="h-12 md:h-16 w-auto object-contain"
             />
             <span>é para você <span className="text-[#1d4ed8]">se…</span></span>
