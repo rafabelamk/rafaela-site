@@ -630,13 +630,13 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 sm:mb-14 leading-tight flex flex-wrap items-center gap-3">
             <span>O que a</span>
             <Image
-              src="/logos/insight-logo.png"
+              src="/logos/insight-logo-green.png"
               alt="InSight"
-              width={310}
+              width={302}
               height={80}
               className="h-10 md:h-14 w-auto object-contain"
             />
-            <span className="text-blue-400">entrega?</span>
+            <span className="text-[#9eff1f]">entrega?</span>
           </h2>
 
           {[
