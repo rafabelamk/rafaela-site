@@ -510,9 +510,9 @@ export default function Home() {
             <Image
               src="/logos/insight-logo.png"
               alt="InSight"
-              width={220}
-              height={64}
-              className="h-9 md:h-12 w-auto object-contain"
+              width={344}
+              height={100}
+              className="h-12 md:h-16 w-auto object-contain"
             />
             <span>é para você <span className="text-[#1d4ed8]">se…</span></span>
           </h2>
