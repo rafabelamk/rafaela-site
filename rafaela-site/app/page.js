@@ -562,10 +562,10 @@ export default function Home() {
             })}
           </div>
 
-          <div className="my-8 sm:my-10 border-t border-gray-200/70" />
+          <div className="my-5 sm:my-6 border-t border-gray-200/70" />
 
-          <div className="flex items-start gap-4 bg-red-50 border border-red-200 rounded-2xl p-5 sm:p-6">
-            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-500 flex items-center justify-center mt-0.5">
+          <div className="flex items-center gap-4 bg-red-50 border border-red-200 rounded-2xl p-5 sm:p-6">
+            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-500 flex items-center justify-center">
               <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
                 <path d="M6 6l12 12M18 6L6 18" />
               </svg>
