@@ -427,10 +427,10 @@ export default function Home() {
       </section>
 
       {/* SOBRE A INSIGHT */}
-      <section className="bg-[#0d1b3e] py-12 sm:py-20 px-5 sm:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none select-none opacity-[0.05]">
+      <section className="bg-[#9eff1f] py-12 sm:py-20 px-5 sm:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none select-none opacity-[0.06]">
           {Array.from({length: 10}).map((_, i) => (
-            <div key={i} className="whitespace-nowrap text-white font-black tracking-widest py-1"
+            <div key={i} className="whitespace-nowrap text-[#0d1b3e] font-black tracking-widest py-1"
                  style={{fontSize:'4rem', transform: `translateX(${i % 2 === 0 ? '0%' : '-8%'})`}}>
               {'INSIGHT INSIGHT INSIGHT INSIGHT INSIGHT '}
             </div>
@@ -439,16 +439,16 @@ export default function Home() {
 
         <div className="max-w-3xl mx-auto relative text-center">
           <Image
-            src="/logos/insight-logo.png"
+            src="/logos/insight-logo-onGreen.png"
             alt="InSight"
             width={310}
             height={80}
             className="h-9 md:h-12 w-auto object-contain mx-auto mb-6"
           />
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-5">
-            A InSight é pra quem quer ter <span className="text-blue-400">tudo à vista</span> e crescer com <span className="text-blue-400">previsibilidade</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0d1b3e] leading-tight mb-5">
+            A InSight é pra quem quer ter <span className="text-white">tudo à vista</span> e crescer com <span className="text-white">previsibilidade</span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[#0d1b3e]/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             Metodologia própria de gestão de tráfego pago que une estratégia, dados e execução — sem achismo, sem promessa vazia. Cada real investido tem propósito, cada resultado é mensurável, e cada decisão é orientada por número real, não por intuição.
           </p>
         </div>
@@ -551,7 +551,7 @@ export default function Home() {
               height={80}
               className="h-12 md:h-16 w-auto object-contain"
             />
-            <span>é para você <span className="text-[#1d4ed8]">se…</span></span>
+            <span>é para você <span className="text-[#9eff1f]">se…</span></span>
           </h2>
 
           <div className="space-y-3.5">
