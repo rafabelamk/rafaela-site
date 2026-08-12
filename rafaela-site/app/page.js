@@ -200,6 +200,7 @@ function PhoneMockup() {
 export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openFAQ, setOpenFAQ] = useState(null)
+  const [checkedFit, setCheckedFit] = useState([])
   const [scrolled, setScrolled] = useState(false)
   const [activeT, setActiveT] = useState(0)
 
@@ -497,6 +498,73 @@ export default function Home() {
                 <p className="text-[#0d1b3e] font-bold text-sm leading-snug">{item.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PARA VOCÊ SE... */}
+      <section className="bg-[#f0f4ff] py-10 sm:py-16 px-5 sm:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-6 sm:mb-14 leading-tight">
+            É para você <span className="text-[#1d4ed8]">se…</span>
+          </h2>
+
+          <div className="space-y-3.5">
+            {[
+              'Quer crescer com anúncios de forma previsível',
+              'Já investe ou pretende investir pelo menos R$ 1.500/mês',
+              'Busca uma parceira estratégica, não uma "apertadora de botão"',
+              'Valoriza dados, processo e visão de longo prazo',
+            ].map((text, i) => {
+              const checked = checkedFit.includes(i)
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setCheckedFit(p => checked ? p.filter(x => x !== i) : [...p, i])}
+                  aria-pressed={checked}
+                  className={`w-full flex items-center gap-4 text-left bg-white rounded-2xl p-5 sm:p-6 border transition-all duration-300 ${
+                    checked
+                      ? 'border-[#1d4ed8] shadow-md -translate-y-0.5 ring-1 ring-[#1d4ed8]/20'
+                      : 'border-gray-100 shadow-sm hover:border-blue-200 hover:shadow-md hover:-translate-y-0.5'
+                  }`}
+                >
+                  <span
+                    className={`relative flex-shrink-0 w-7 h-7 rounded-lg border-2 flex items-center justify-center transition-all duration-300 ${
+                      checked ? 'bg-[#1d4ed8] border-[#1d4ed8] scale-105' : 'bg-white border-gray-300'
+                    }`}
+                  >
+                    <svg
+                      className={`w-4 h-4 text-white transition-all duration-300 ${
+                        checked ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
+                      }`}
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"
+                      strokeLinecap="round" strokeLinejoin="round"
+                    >
+                      <path d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <p className={`font-bold text-[15px] sm:text-base leading-snug transition-colors duration-300 ${
+                    checked ? 'text-[#0d1b3e]' : 'text-[#0d1b3e]/90'
+                  }`}>
+                    {text}
+                  </p>
+                </button>
+              )
+            })}
+          </div>
+
+          <div className="my-8 sm:my-10 border-t border-gray-200/70" />
+
+          <div className="flex items-start gap-4 bg-red-50 border border-red-200 rounded-2xl p-5 sm:p-6">
+            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-500 flex items-center justify-center mt-0.5">
+              <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            </span>
+            <p className="text-[#0d1b3e] text-[15px] sm:text-base leading-relaxed">
+              <span className="font-black">Não é para quem</span> busca milagre, promessas irreais ou tráfego sem estratégia.
+            </p>
           </div>
         </div>
       </section>
@@ -869,4 +937,3 @@ export default function Home() {
     </>
   )
 }
- 
