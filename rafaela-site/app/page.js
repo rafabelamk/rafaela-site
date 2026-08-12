@@ -273,7 +273,7 @@ export default function Home() {
             {[['#servicos','Serviços'],['#metodo','Método ADS'],['#sobre','Sobre'],['#faq','FAQ']].map(([href,label]) => (
               <a key={href} href={href} className="text-gray-300 hover:text-white text-sm font-medium transition-colors">{label}</a>
             ))}
-            <a href={WA} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105">
+            <a href={WA} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-[#059669] hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105">
               <IconWA className="w-4 h-4"/> Fale comigo
             </a>
           </div>
@@ -289,7 +289,7 @@ export default function Home() {
               <a key={href} href={href} onClick={() => setMobileOpen(false)} className="text-gray-200 hover:text-white text-base font-medium py-3 border-b border-white/5">{label}</a>
             ))}
             <a href={WA} target="_blank" rel="noreferrer" onClick={() => setMobileOpen(false)}
-               className="flex items-center justify-center gap-2 bg-[#1d4ed8] text-white px-6 py-3.5 rounded-full font-bold mt-3">
+               className="flex items-center justify-center gap-2 bg-[#059669] text-white px-6 py-3.5 rounded-full font-bold mt-3">
               <IconWA className="w-5 h-5"/> Falar no WhatsApp
             </a>
           </div>
@@ -505,8 +505,16 @@ export default function Home() {
       {/* PARA VOCÊ SE... */}
       <section className="bg-[#f0f4ff] py-10 sm:py-16 px-5 sm:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-6 sm:mb-14 leading-tight">
-            É para você <span className="text-[#1d4ed8]">se…</span>
+          <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] text-center mb-6 sm:mb-14 leading-tight flex flex-wrap items-center justify-center gap-3">
+            <span>A</span>
+            <Image
+              src="/logos/insight-logo.png"
+              alt="InSight"
+              width={220}
+              height={64}
+              className="h-9 md:h-12 w-auto object-contain"
+            />
+            <span>é para você <span className="text-[#1d4ed8]">se…</span></span>
           </h2>
 
           <div className="space-y-3.5">
