@@ -621,20 +621,20 @@ export default function Home() {
           {Array.from({length: 12}).map((_, i) => (
             <div key={i} className="whitespace-nowrap text-white font-black tracking-widest py-1 opacity-[0.04]"
                  style={{fontSize:'4rem', transform: `translateX(${i % 2 === 0 ? '0%' : '-8%'})`}}>
-              {'RAFAELA GEIGER RAFAELA GEIGER RAFAELA GEIGER RAFAELA GEIGER '}
+              {'INSIGHT INSIGHT INSIGHT INSIGHT INSIGHT '}
             </div>
           ))}
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 sm:mb-14 leading-tight flex flex-wrap items-center gap-3">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 sm:mb-14 leading-tight flex flex-wrap items-center justify-center gap-3 text-center">
             <span>O que a</span>
             <Image
               src="/logos/insight-logo-green.png"
               alt="InSight"
               width={302}
               height={80}
-              className="h-10 md:h-14 w-auto object-contain"
+              className="h-14 md:h-20 w-auto object-contain self-center -translate-y-0.5"
             />
             <span className="text-[#9eff1f]">entrega?</span>
           </h2>
@@ -862,25 +862,25 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto relative">
-          <div className="mb-10 sm:mb-14">
+          <div className="mb-10 sm:mb-14 text-center">
             <span className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-1.5 text-[#0d1b3e] text-xs font-bold uppercase tracking-widest shadow-sm">
               <svg className="w-3.5 h-3.5 text-[#9eff1f]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"/></svg>
               Conheça a InSight
             </span>
-            <h3 className="flex flex-wrap items-center gap-3 text-3xl sm:text-4xl font-black text-[#0d1b3e] mt-4">
+            <h3 className="flex flex-wrap items-center justify-center gap-3 text-3xl sm:text-4xl font-black text-[#0d1b3e] mt-4">
               <span>O rosto por trás da</span>
               <Image
-                src="/logos/insight-logo-green.png"
+                src="/logos/insight-logo-dark.png"
                 alt="InSight"
                 width={302}
                 height={80}
                 className="h-8 sm:h-10 w-auto object-contain"
               />
             </h3>
-            <div className="w-16 h-1.5 bg-[#0d1b3e] rounded-full mt-4"></div>
+            <div className="w-16 h-1.5 bg-[#0d1b3e] rounded-full mt-4 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
             <div className="relative order-2 md:order-1 max-w-xs sm:max-w-sm mx-auto md:mx-0">
               <div className="bg-white rounded-3xl overflow-hidden aspect-[4/5] relative shadow-lg border border-gray-100">
                 <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" priority sizes="(max-width: 768px) 100vw, 50vw"/>
@@ -892,6 +892,27 @@ export default function Home() {
               <div className="absolute -top-4 -right-4 bg-[#1d4ed8] rounded-2xl px-4 py-3 text-center shadow-xl shadow-blue-900/30">
                 <p className="text-white text-2xl font-black leading-none">2+</p>
                 <p className="text-white/80 text-xs mt-0.5">anos de experiência</p>
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-2 mt-6">
+                {['Negócios Locais','Infoprodutos','Perpétuo','Lançamento'].map(n => (
+                  <span key={n} className="bg-[#0d1b3e] text-white text-xs font-bold px-4 py-1.5 rounded-full">{n}</span>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-3 mt-4">
+                <a href={WA} target="_blank" rel="noreferrer"
+                   className="flex items-center gap-2 bg-[#059669] hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
+                  <IconWA className="w-4 h-4"/> Quero falar com a Rafaela
+                </a>
+                <a href="https://www.instagram.com/arafaelageiger/" target="_blank" rel="noreferrer"
+                   className="flex items-center gap-2 border border-gray-200 hover:border-pink-400 text-gray-600 hover:text-pink-500 px-6 py-3 rounded-full font-semibold text-sm transition-all">
+                  <IconIG className="w-4 h-4"/> Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/rafaelageiger/" target="_blank" rel="noreferrer"
+                   className="flex items-center gap-2 border border-gray-200 hover:border-[#1d4ed8] text-gray-600 hover:text-[#1d4ed8] px-6 py-3 rounded-full font-semibold text-sm transition-all">
+                  <IconLI className="w-4 h-4"/> LinkedIn
+                </a>
               </div>
             </div>
             <div className="order-1 md:order-2">
@@ -913,27 +934,6 @@ export default function Home() {
               <p className="text-gray-600 leading-relaxed mb-5 text-[15px]">
                 Atuando solo com negócios locais em 2024, geri <strong className="text-[#0d1b3e]">+R$20K em anúncios</strong> impactando negócios dos mais diversos nichos: Salão de Beleza, Plano de Saúde, Engenheiro Civil, Imobiliária, Clínica de Estética, Loja de Importados, entre outros.
               </p>
-
-              <div className="flex flex-wrap gap-2 mb-5">
-                {['Negócios Locais','Infoprodutos','Perpétuo','Lançamento'].map(n => (
-                  <span key={n} className="bg-[#0d1b3e] text-white text-xs font-bold px-4 py-1.5 rounded-full">{n}</span>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <a href={WA} target="_blank" rel="noreferrer"
-                   className="flex items-center gap-2 bg-[#059669] hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
-                  <IconWA className="w-4 h-4"/> Quero falar com a Rafaela
-                </a>
-                <a href="https://www.instagram.com/arafaelageiger/" target="_blank" rel="noreferrer"
-                   className="flex items-center gap-2 border border-gray-200 hover:border-pink-400 text-gray-600 hover:text-pink-500 px-6 py-3 rounded-full font-semibold text-sm transition-all">
-                  <IconIG className="w-4 h-4"/> Instagram
-                </a>
-                <a href="https://www.linkedin.com/in/rafaelageiger/" target="_blank" rel="noreferrer"
-                   className="flex items-center gap-2 border border-gray-200 hover:border-[#1d4ed8] text-gray-600 hover:text-[#1d4ed8] px-6 py-3 rounded-full font-semibold text-sm transition-all">
-                  <IconLI className="w-4 h-4"/> LinkedIn
-                </a>
-              </div>
             </div>
           </div>
         </div>
