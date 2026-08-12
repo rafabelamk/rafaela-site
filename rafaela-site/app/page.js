@@ -784,7 +784,7 @@ export default function Home() {
           <div className="text-center mb-6 sm:mb-10">
             <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Experiência</span>
             <h2 className="text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 leading-tight">Especialistas</h2>
-            <p className="text-gray-500 mt-4 max-w-xl mx-auto">Tive e tenho a oportunidade única de trabalhar com alguns dos maiores players do digital — gestão de infoprodutos, eventos, lançamentos e perpétuo.</p>
+            <p className="text-gray-500 mt-4 max-w-xl mx-auto">Oportunidade única de trabalhar com alguns dos maiores players do digital — gestão de infoprodutos, eventos, lançamentos e perpétuo.</p>
           </div>
           {/* Marquee automático */}
           <div ref={espRef} className="overflow-hidden -mx-5 sm:-mx-8 cursor-grab select-none" style={{overflowX:'auto',scrollbarWidth:'none'}}>
@@ -880,8 +880,8 @@ export default function Home() {
             <div className="w-16 h-1.5 bg-[#0d1b3e] rounded-full mt-4 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
-            <div className="relative order-2 md:order-1 max-w-xs sm:max-w-sm mx-auto md:mx-0">
+          <div className="grid grid-cols-1 md:grid-cols-[380px_1fr] gap-8 md:gap-10 items-center">
+            <div className="relative order-2 md:order-1 max-w-xs sm:max-w-sm md:max-w-none mx-auto md:mx-0">
               <div className="bg-white rounded-3xl overflow-hidden aspect-[4/5] relative shadow-lg border border-gray-100">
                 <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" priority sizes="(max-width: 768px) 100vw, 50vw"/>
                 <div className="absolute bottom-6 left-6 right-6 bg-[#0d1b3e] rounded-xl p-4">
