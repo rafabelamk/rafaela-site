@@ -207,6 +207,13 @@ export default function Home() {
   const logosRef = useRef(null)
   const espRef = useRef(null)
 
+  // Dispara o evento "Lead" do Meta Pixel sempre que um botão de WhatsApp é clicado
+  const handleWAClick = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead')
+    }
+  }
+
   const useDrag = useCallback((ref) => {
     const el = ref.current
     if (!el) return
@@ -273,7 +280,7 @@ export default function Home() {
             {[['#servicos','Serviços'],['#metodo','Método ADS'],['#sobre','Sobre'],['#faq','FAQ']].map(([href,label]) => (
               <a key={href} href={href} className="text-gray-300 hover:text-white text-sm font-medium transition-colors">{label}</a>
             ))}
-            <a href={WA} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-[#059669] hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105">
+            <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick} className="flex items-center gap-2 bg-[#059669] hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105">
               <IconWA className="w-4 h-4"/> Fale comigo
             </a>
           </div>
@@ -288,7 +295,7 @@ export default function Home() {
             {[['#servicos','Serviços'],['#metodo','Método ADS'],['#sobre','Sobre'],['#faq','FAQ']].map(([href,label]) => (
               <a key={href} href={href} onClick={() => setMobileOpen(false)} className="text-gray-200 hover:text-white text-base font-medium py-3 border-b border-white/5">{label}</a>
             ))}
-            <a href={WA} target="_blank" rel="noreferrer" onClick={() => setMobileOpen(false)}
+            <a href={WA} target="_blank" rel="noreferrer" onClick={() => { handleWAClick(); setMobileOpen(false) }}
                className="flex items-center justify-center gap-2 bg-[#059669] text-white px-6 py-3.5 rounded-full font-bold mt-3">
               <IconWA className="w-5 h-5"/> Falar no WhatsApp
             </a>
@@ -340,7 +347,7 @@ export default function Home() {
                 Sou Rafaela Geiger, gestora de tráfego e analista de mídia paga e performance. Impulsiono negócios locais, digitais e marcas a crescerem de forma previsível com estratégia, dados e otimização contínua.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href={WA} target="_blank" rel="noreferrer"
+                <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick}
                    className="flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/40">
                   <IconWA className="w-5 h-5"/> Quero uma análise gratuita
                 </a>
@@ -386,7 +393,7 @@ export default function Home() {
             <p className="text-white/70 text-xs font-bold uppercase tracking-widest mb-1">Análise gratuita e sem compromisso</p>
             <h2 className="text-white text-2xl md:text-3xl font-black leading-tight">Descubra como escalar seu negócio com tráfego pago estratégico</h2>
           </div>
-          <a href={WA} target="_blank" rel="noreferrer"
+          <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick}
              className="flex-shrink-0 flex items-center gap-2 bg-white hover:bg-gray-100 text-[#1d4ed8] px-8 py-4 rounded-full font-bold transition-all hover:scale-105">
             <IconWA className="w-5 h-5"/> Falar no WhatsApp →
           </a>
@@ -695,7 +702,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-14">
-            <a href={WA} target="_blank" rel="noreferrer"
+            <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick}
                className="inline-flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/40">
               <IconWA className="w-5 h-5"/> Quero aplicar o Método ADS no meu negócio
             </a>
@@ -901,7 +908,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-3 mt-4">
-                <a href={WA} target="_blank" rel="noreferrer"
+                <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick}
                    className="flex items-center gap-2 bg-[#059669] hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
                   <IconWA className="w-4 h-4"/> Quero falar com a Rafaela
                 </a>
@@ -973,7 +980,7 @@ export default function Home() {
           <p className="text-gray-400 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
             Agende uma análise gratuita e descubra oportunidades reais para o seu negócio decolar com tráfego pago.
           </p>
-          <a href={WA} target="_blank" rel="noreferrer"
+          <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick}
              className="inline-flex items-center gap-3 bg-[#1d4ed8] hover:bg-blue-600 text-white px-10 py-5 rounded-full font-black text-xl transition-all hover:scale-105 hover:shadow-2xl hover:shadow-blue-900/40">
             <IconWA className="w-6 h-6"/> Agendar análise gratuita →
           </a>
@@ -1003,7 +1010,7 @@ export default function Home() {
             <div>
               <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest">Contato</h4>
               <div className="space-y-3">
-                <a href={WA} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-white text-sm transition-colors"><IconWA className="w-4 h-4"/> WhatsApp</a>
+                <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick} className="flex items-center gap-2 text-gray-500 hover:text-white text-sm transition-colors"><IconWA className="w-4 h-4"/> WhatsApp</a>
                 <a href="https://www.instagram.com/arafaelageiger/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-white text-sm transition-colors"><IconIG className="w-4 h-4"/> @arafaelageiger</a>
                 <a href="https://www.linkedin.com/in/rafaelageiger/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-white text-sm transition-colors"><IconLI className="w-4 h-4"/> LinkedIn</a>
               </div>
