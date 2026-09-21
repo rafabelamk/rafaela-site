@@ -985,6 +985,32 @@ export default function Home() {
             Veja como penso a estratégia no Gerenciador de Anúncios
           </h2>
 
+          {/* Bio estilo perfil do Instagram */}
+          <div className="max-w-[320px] mx-auto mb-6 bg-[#0d1b3e] rounded-2xl p-5 text-left">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 relative border-2 border-white/10">
+                <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="64px"/>
+              </div>
+              <div className="min-w-0">
+                <p className="text-white font-black text-lg leading-tight truncate">arafaelageiger</p>
+                <p className="text-gray-400 text-xs mt-0.5">Rafaela Geiger | Tráfego Pago</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 text-white text-xs font-bold border-t border-white/10 pt-3 mb-3">
+              <span>32 <span className="text-gray-400 font-normal">posts</span></span>
+              <span>747 <span className="text-gray-400 font-normal">seguidores</span></span>
+              <span>1.055 <span className="text-gray-400 font-normal">seguindo</span></span>
+            </div>
+            <div className="space-y-1.5 text-gray-200 text-[13px] leading-relaxed border-t border-white/10 pt-3">
+              <p>📊 Analista de Tráfego Pago e Performance</p>
+              <p>👁️ @1sightmkt</p>
+              <p>🚀 Negócios locais, Marcas e Infoprodutos</p>
+              <p>💰 +R$1.5M geridos em anúncios online</p>
+              <p>📍 São Paulo SP</p>
+              <p>🔗 <span className="text-blue-400">arafaelageiger.com.br</span></p>
+            </div>
+          </div>
+
           <div className="max-w-[320px] mx-auto bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
             {/* Header estilo post do Instagram */}
             <div className="flex items-center gap-2.5 px-3.5 py-3">
