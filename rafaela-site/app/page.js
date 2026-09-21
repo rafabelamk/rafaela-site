@@ -619,6 +619,37 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        {/* INDICAÇÕES PARA UMA BOA PARCERIA */}
+        <div className="max-w-5xl mx-auto mt-14 sm:mt-20">
+          <h3 className="text-3xl sm:text-4xl font-black text-[#0d1b3e] text-center md:text-left mb-8 sm:mb-12 leading-tight">
+            Indicações para fazermos uma <span className="text-[#1d4ed8]">ótima parceria</span> para ambos
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 md:gap-10 items-center">
+            <div className="mx-auto md:mx-0 max-w-[260px] md:max-w-none">
+              <Image
+                src="/images/computador-retro.png"
+                alt="Computador retrô"
+                width={605}
+                height={565}
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="space-y-4">
+              {INDICACOES.map((item, i) => (
+                <div key={i} className="bg-[#0d1b3e] rounded-2xl p-5 sm:p-6 flex items-start gap-4">
+                  <span className="w-11 h-11 rounded-full bg-[#1d4ed8] flex items-center justify-center flex-shrink-0">
+                    {item.icon}
+                  </span>
+                  <div>
+                    <h4 className="text-white font-black text-base sm:text-lg mb-1.5 leading-snug">{item.title}</h4>
+                    <p className="text-gray-300 text-[13px] sm:text-sm leading-relaxed">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* O QUE EU ENTREGO */}
@@ -942,6 +973,30 @@ export default function Home() {
                 Atuando solo com negócios locais em 2024, geri <strong className="text-[#0d1b3e]">+R$20K em anúncios</strong> impactando negócios dos mais diversos nichos: Salão de Beleza, Plano de Saúde, Engenheiro Civil, Imobiliária, Clínica de Estética, Loja de Importados, entre outros.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* VÍDEO — ESTRATÉGIA NO GERENCIADOR DE ANÚNCIOS */}
+      <section className="bg-white py-10 sm:py-16 px-5 sm:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+          <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Por dentro da estratégia</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 mb-8 leading-tight">
+            Veja como penso a estratégia no Gerenciador de Anúncios
+          </h2>
+          <div
+            className="relative mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-gray-100 bg-[#0d1b3e]"
+            style={{ maxWidth: '320px', aspectRatio: '9 / 16' }}
+          >
+            <video
+              src="/videos/estrategia-gerenciador-ads.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover"
+            >
+              Seu navegador não suporta a exibição de vídeos.
+            </video>
           </div>
         </div>
       </section>
