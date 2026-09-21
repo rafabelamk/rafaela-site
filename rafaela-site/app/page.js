@@ -1019,16 +1019,16 @@ export default function Home() {
 
       {/* VÍDEO — ESTRATÉGIA NO GERENCIADOR DE ANÚNCIOS (estilo post do Instagram) */}
       <section className="bg-white py-10 sm:py-16 px-5 sm:px-8">
-        <div className="max-w-md mx-auto text-center">
+        <div className="max-w-xl mx-auto text-center">
           {/* Bio estilo perfil do Instagram (compacta, clicável) */}
           <a
             href="https://www.instagram.com/arafaelageiger/"
             target="_blank"
             rel="noreferrer"
-            className="max-w-[320px] mx-auto mb-6 bg-[#0d1b3e] hover:bg-[#12234c] transition-colors rounded-2xl p-4 flex items-center gap-4 text-left"
+            className="mb-6 bg-[#0d1b3e] hover:bg-[#12234c] transition-colors rounded-2xl p-4 flex items-center gap-4 text-left"
           >
-            <div className="w-20 h-20 rounded-full p-[3px] border-[3px] border-[#9eff1f] flex-shrink-0">
-              <div className="w-full h-full rounded-full overflow-hidden relative">
+            <div className="w-20 h-20 rounded-full p-[3px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+              <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#0d1b3e]">
                 <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="80px"/>
               </div>
             </div>
@@ -1046,7 +1046,8 @@ export default function Home() {
             </div>
           </a>
 
-          <div className="max-w-[320px] mx-auto bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
+          <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
             {/* Header estilo post do Instagram */}
             <div className="flex items-center gap-2.5 px-3.5 py-3">
               <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
@@ -1080,18 +1081,18 @@ export default function Home() {
             </div>
 
             {/* Ações estilo Instagram */}
-            <div className="flex items-center gap-4 px-3.5 pt-3 pb-1.5">
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex items-center gap-3 px-3 pt-2.5 pb-1">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
               </svg>
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
               </svg>
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
               </svg>
               <span className="flex-1"/>
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
               </svg>
             </div>
@@ -1105,7 +1106,7 @@ export default function Home() {
           </div>
 
           {/* Segundo post: lições sobre tráfego pago */}
-          <div className="max-w-[320px] mx-auto mt-6 bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
             {/* Header estilo post do Instagram */}
             <div className="flex items-center gap-2.5 px-3.5 py-3">
               <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
@@ -1139,18 +1140,18 @@ export default function Home() {
             </div>
 
             {/* Ações estilo Instagram */}
-            <div className="flex items-center gap-4 px-3.5 pt-3 pb-1.5">
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex items-center gap-3 px-3 pt-2.5 pb-1">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
               </svg>
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
               </svg>
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
               </svg>
               <span className="flex-1"/>
-              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
               </svg>
             </div>
@@ -1170,6 +1171,7 @@ export default function Home() {
                 </button>
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>
