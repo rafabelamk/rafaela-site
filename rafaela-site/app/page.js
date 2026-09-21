@@ -1004,7 +1004,7 @@ export default function Home() {
             {/* Vídeo */}
             <div className="relative bg-[#0d1b3e]" style={{ aspectRatio: '9 / 16' }}>
               <video
-                src="/videos/estrategia-gerenciador-ads.mp4"
+                src="/estrategia-gerenciador-ads.mp4"
                 controls
                 playsInline
                 preload="metadata"
