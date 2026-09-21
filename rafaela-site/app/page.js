@@ -628,7 +628,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 md:gap-10 items-center">
             <div className="mx-auto md:mx-0 max-w-[260px] md:max-w-none">
               <Image
-                src="/images/computador-retro.png"
+                src="/computador-retro.png"
                 alt="Computador retrô"
                 width={605}
                 height={565}
@@ -977,26 +977,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VÍDEO — ESTRATÉGIA NO GERENCIADOR DE ANÚNCIOS */}
+      {/* VÍDEO — ESTRATÉGIA NO GERENCIADOR DE ANÚNCIOS (estilo post do Instagram) */}
       <section className="bg-white py-10 sm:py-16 px-5 sm:px-8">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-md mx-auto text-center">
           <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Por dentro da estratégia</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0d1b3e] mt-3 mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#0d1b3e] mt-3 mb-8 leading-tight">
             Veja como penso a estratégia no Gerenciador de Anúncios
           </h2>
-          <div
-            className="relative mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-gray-100 bg-[#0d1b3e]"
-            style={{ maxWidth: '320px', aspectRatio: '9 / 16' }}
-          >
-            <video
-              src="/videos/estrategia-gerenciador-ads.mp4"
-              controls
-              playsInline
-              preload="metadata"
-              className="w-full h-full object-cover"
-            >
-              Seu navegador não suporta a exibição de vídeos.
-            </video>
+
+          <div className="max-w-[320px] mx-auto bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
+            {/* Header estilo post do Instagram */}
+            <div className="flex items-center gap-2.5 px-3.5 py-3">
+              <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+                <div className="w-full h-full rounded-full border-2 border-white overflow-hidden relative">
+                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="36px"/>
+                </div>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-[#0d1b3e] text-[13px] font-bold leading-tight truncate">arafaelageiger</p>
+              </div>
+              <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+              </svg>
+            </div>
+
+            {/* Vídeo */}
+            <div className="relative bg-[#0d1b3e]" style={{ aspectRatio: '9 / 16' }}>
+              <video
+                src="/videos/estrategia-gerenciador-ads.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover"
+              >
+                Seu navegador não suporta a exibição de vídeos.
+              </video>
+              <span className="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/55 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded-md pointer-events-none">
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Reels
+              </span>
+            </div>
+
+            {/* Ações estilo Instagram */}
+            <div className="flex items-center gap-4 px-3.5 pt-3 pb-1.5">
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <span className="flex-1"/>
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+              </svg>
+            </div>
+
+            {/* Legenda */}
+            <div className="px-3.5 pb-4 pt-1">
+              <p className="text-[#0d1b3e] text-[13px] leading-snug">
+                <span className="font-black">arafaelageiger</span> Por dentro da estratégia no Gerenciador de Anúncios 👁️📊
+              </p>
+            </div>
           </div>
         </div>
       </section>
