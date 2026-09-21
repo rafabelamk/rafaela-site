@@ -49,14 +49,14 @@ const LOGOS = [
 
 const METHODOLOGY = [
   { num: '01', title: 'Atrair', emoji: '🎯',
-    desc: 'Identificamos seu público ideal e criamos anúncios que capturam atenção no momento e plataforma certos, com criativos pensados para converter.',
-    detail: 'Pesquisa de mercado · Definição de ICP · Criativos estratégicos' },
+    desc: 'Você não quer só mais um anúncio no ar — quer se destacar de quem vende a mesma coisa que você. Pesquisa do que já funciona no seu mercado, adaptada ao seu negócio, com criativos feitos pra prender o olhar, não pra passar despercebido.',
+    detail: 'Pesquisa de concorrentes · Método validado · Adaptado ao seu negócio' },
   { num: '02', title: 'Direcionar', emoji: '🚀',
-    desc: 'Segmentação inteligente e funil bem estruturado para levar as pessoas certas — com real potencial de compra — até o seu negócio.',
-    detail: 'Segmentação avançada · Pixel & rastreamento · Estrutura de campanha' },
+    desc: 'Você quer parar de sentir que tá apostando o seu dinheiro. Rastreamento e segmentação certos pra você enxergar exatamente pra onde foi cada real — e o que trouxe retorno de verdade.',
+    detail: 'Rastreamento completo · Segmentação avançada · Estrutura de campanha' },
   { num: '03', title: 'Seduzir', emoji: '💡',
-    desc: 'Mensagens, ofertas e criativos que convertem interesse genuíno em clientes reais, com otimização contínua baseada em dados.',
-    detail: 'Otimização contínua · CRO · Relatórios de performance' },
+    desc: 'Você não quer só "mais lead" — quer clareza pra saber o que vale a pena continuar. Números traduzidos em decisão: o que cortar, o que escalar, mês a mês.',
+    detail: 'Relatórios com CPL e ROAS · Otimização contínua · Decisão orientada por dado' },
 ]
 
 const FAQ_DATA = [
@@ -742,11 +742,11 @@ export default function Home() {
           </h2>
 
           {[
-            { num: '01', title: 'Tráfego Pago — Meta Ads', sub: 'Campanhas estratégicas no Facebook e Instagram com foco em geração de leads e crescimento de base.' },
-            { num: '02', title: 'Tráfego Pago — Google Ads', sub: 'Anúncios na rede de pesquisa e display para capturar intenção de compra no momento certo.' },
-            { num: '03', title: 'Consultoria em Tráfego Pago', sub: 'Diagnóstico estratégico completo com plano de ação personalizado para o seu negócio.' },
-            { num: '04', title: 'Relatórios & Análise de Performance', sub: 'Relatórios periódicos com KPIs, CPL, ROAS e progressão histórica de resultados.' },
-            { num: '05', title: 'Dashboards Personalizados com Inteligência de Dados', sub: 'Criação de dashboards sob medida para acompanhar performance e automatizar decisões com base em dados reais.' },
+            { num: '01', title: 'Tráfego Pago — Meta Ads', sub: 'Você não quer só engajamento — quer gente com intenção real de comprar. Campanhas pensadas pra atrair quem já tá pronto pra fechar, não curioso passando o dedo na tela.' },
+            { num: '02', title: 'Tráfego Pago — Google Ads', sub: 'Enquanto você não aparece, seu concorrente já apareceu pra quem tava procurando exatamente o que você vende. Presença garantida na frente de quem já decidiu comprar.' },
+            { num: '03', title: 'Consultoria em Tráfego Pago', sub: 'Antes de investir um real em anúncio, você merece saber se sua oferta e seu comercial estão prontos pra isso. Diagnóstico completo, com plano de ação pro seu momento — não fórmula genérica.' },
+            { num: '04', title: 'Relatórios & Análise de Performance', sub: 'Você não quer só saber que "o anúncio rodou" — quer saber quanto voltou. Relatórios que traduzem CPL e ROAS em números que fazem sentido pro seu caixa.' },
+            { num: '05', title: 'Dashboards Personalizados com Inteligência de Dados', sub: 'Decisão no escuro custa caro. Um painel com tudo à vista, em tempo real, pra você decidir com dado — não com frio na barriga.' },
           ].map((item, i, arr) => (
             <div key={i} className={`flex items-start gap-5 py-7 group cursor-default transition-all ${i < arr.length - 1 ? 'border-b border-white/10 hover:border-white/25' : ''}`}>
               <span className="text-gray-600 text-sm font-bold w-8 flex-shrink-0 pt-1">{item.num}</span>
@@ -772,7 +772,7 @@ export default function Home() {
           <div className="text-center mb-8 sm:mb-16">
             <span className="inline-block bg-[#1d4ed8]/20 border border-[#1d4ed8]/40 text-blue-300 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">Como funciona</span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-2">O <span className="text-blue-400">Método ADS</span></h2>
-            <p className="text-gray-400 mt-4 max-w-xl mx-auto leading-relaxed">Três etapas integradas que transformam investimento em anúncios em clientes reais e mensuráveis.</p>
+            <p className="text-gray-400 mt-4 max-w-xl mx-auto leading-relaxed">Ninguém quer "rodar anúncio". Você quer parar de acordar sem saber de onde vai vir o cliente do mês que vem.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {METHODOLOGY.map((step, i) => (
@@ -797,6 +797,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-14">
+            <p className="text-gray-400 text-sm mb-6 max-w-lg mx-auto leading-relaxed">No fim, isso não é sobre anúncio. É sobre você não depender mais de sorte.</p>
             <a href={WA} target="_blank" rel="noreferrer" onClick={handleWAClick}
                className="inline-flex items-center gap-2 bg-[#1d4ed8] hover:bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/40">
               <IconWA className="w-5 h-5"/> Quero aplicar o Método ADS no meu negócio
@@ -1070,19 +1071,19 @@ export default function Home() {
             </div>
           </a>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
             {/* Header estilo post do Instagram */}
-            <div className="flex items-center gap-2.5 px-3.5 py-3">
-              <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+            <div className="flex items-center gap-1.5 px-2 py-2">
+              <div className="w-6 h-6 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
                 <div className="w-full h-full rounded-full border-2 border-white overflow-hidden relative">
-                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="36px"/>
+                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="26px"/>
                 </div>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[#0d1b3e] text-[13px] font-bold leading-tight truncate">arafaelageiger</p>
+                <p className="text-[#0d1b3e] text-[10px] font-bold leading-tight truncate">arafaelageiger</p>
               </div>
-              <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-3 h-3 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
               </svg>
             </div>
@@ -1105,25 +1106,25 @@ export default function Home() {
             </div>
 
             {/* Ações estilo Instagram */}
-            <div className="flex items-center gap-3 px-3 pt-2.5 pb-1">
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex items-center gap-1.5 px-2 pt-1.5 pb-0.5">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
               </svg>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
               </svg>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
               </svg>
               <span className="flex-1"/>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
               </svg>
             </div>
 
             {/* Legenda */}
-            <div className="px-3.5 pb-4 pt-1">
-              <p className="text-[#0d1b3e] text-[13px] leading-snug">
+            <div className="px-2 pb-2.5 pt-0.5">
+              <p className="text-[#0d1b3e] text-[10px] leading-snug">
                 <span className="font-black">arafaelageiger</span> Por dentro da estratégia no Gerenciador de Anúncios 👁️📊
               </p>
             </div>
@@ -1132,16 +1133,16 @@ export default function Home() {
           {/* Segundo post: lições sobre tráfego pago */}
           <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
             {/* Header estilo post do Instagram */}
-            <div className="flex items-center gap-2.5 px-3.5 py-3">
-              <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+            <div className="flex items-center gap-1.5 px-2 py-2">
+              <div className="w-6 h-6 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
                 <div className="w-full h-full rounded-full border-2 border-white overflow-hidden relative">
-                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="36px"/>
+                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="26px"/>
                 </div>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[#0d1b3e] text-[13px] font-bold leading-tight truncate">arafaelageiger</p>
+                <p className="text-[#0d1b3e] text-[10px] font-bold leading-tight truncate">arafaelageiger</p>
               </div>
-              <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-3 h-3 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
               </svg>
             </div>
@@ -1164,25 +1165,25 @@ export default function Home() {
             </div>
 
             {/* Ações estilo Instagram */}
-            <div className="flex items-center gap-3 px-3 pt-2.5 pb-1">
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex items-center gap-1.5 px-2 pt-1.5 pb-0.5">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
               </svg>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
               </svg>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
               </svg>
               <span className="flex-1"/>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
               </svg>
             </div>
 
             {/* Legenda com "ler mais" */}
-            <div className="px-3.5 pb-4 pt-1">
-              <p className="text-[#0d1b3e] text-[13px] leading-snug whitespace-pre-line">
+            <div className="px-2 pb-2.5 pt-0.5">
+              <p className="text-[#0d1b3e] text-[10px] leading-snug whitespace-pre-line">
                 <span className="font-black">arafaelageiger</span>{' '}
                 {tipsExpanded ? TIPS_CAPTION : TIPS_CAPTION.split('\n\n')[0]}
                 {' '}
@@ -1198,18 +1199,18 @@ export default function Home() {
           </div>
 
           {/* Terceiro post: carrossel "Tráfego não dá certo" */}
-          <div className="col-span-2 bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
             {/* Header estilo post do Instagram */}
-            <div className="flex items-center gap-2.5 px-3.5 py-3">
-              <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+            <div className="flex items-center gap-1.5 px-2 py-2">
+              <div className="w-6 h-6 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
                 <div className="w-full h-full rounded-full border-2 border-white overflow-hidden relative">
-                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="36px"/>
+                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="26px"/>
                 </div>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[#0d1b3e] text-[13px] font-bold leading-tight truncate">arafaelageiger</p>
+                <p className="text-[#0d1b3e] text-[10px] font-bold leading-tight truncate">arafaelageiger</p>
               </div>
-              <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-3 h-3 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
               </svg>
             </div>
@@ -1256,25 +1257,25 @@ export default function Home() {
             </div>
 
             {/* Ações estilo Instagram */}
-            <div className="flex items-center gap-3 px-3 pt-2.5 pb-1">
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex items-center gap-1.5 px-2 pt-1.5 pb-0.5">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
               </svg>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
               </svg>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
               </svg>
               <span className="flex-1"/>
-              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
               </svg>
             </div>
 
             {/* Legenda */}
-            <div className="px-3.5 pb-4 pt-1">
-              <p className="text-[#0d1b3e] text-[13px] leading-snug whitespace-pre-line">
+            <div className="px-2 pb-2.5 pt-0.5">
+              <p className="text-[#0d1b3e] text-[10px] leading-snug whitespace-pre-line">
                 <span className="font-black">arafaelageiger</span> {CAROUSEL_CAPTION}
               </p>
             </div>
