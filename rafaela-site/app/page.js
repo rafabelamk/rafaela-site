@@ -980,11 +980,6 @@ export default function Home() {
       {/* VÍDEO — ESTRATÉGIA NO GERENCIADOR DE ANÚNCIOS (estilo post do Instagram) */}
       <section className="bg-white py-10 sm:py-16 px-5 sm:px-8">
         <div className="max-w-md mx-auto text-center">
-          <span className="text-[#1d4ed8] text-sm font-bold tracking-widest uppercase">Por dentro da estratégia</span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0d1b3e] mt-3 mb-8 leading-tight">
-            Veja como penso a estratégia no Gerenciador de Anúncios
-          </h2>
-
           {/* Bio estilo perfil do Instagram */}
           <div className="max-w-[320px] mx-auto mb-6 bg-[#0d1b3e] rounded-2xl p-5 text-left">
             <div className="flex items-center gap-4 mb-4">
@@ -999,7 +994,6 @@ export default function Home() {
             <div className="flex items-center gap-4 text-white text-xs font-bold border-t border-white/10 pt-3 mb-3">
               <span>32 <span className="text-gray-400 font-normal">posts</span></span>
               <span>747 <span className="text-gray-400 font-normal">seguidores</span></span>
-              <span>1.055 <span className="text-gray-400 font-normal">seguindo</span></span>
             </div>
             <div className="space-y-1.5 text-gray-200 text-[13px] leading-relaxed border-t border-white/10 pt-3">
               <p>📊 Analista de Tráfego Pago e Performance</p>
