@@ -112,6 +112,29 @@ const TIPS_CAPTION = `1. Não existe campanha perfeita, existe estratégia e oti
 
 18. Hoje o conhecimento técnico de gerenciador já não diferencia ninguém. Mas quanto mais você entende de tráfego, mais você entende que ele acontece mais fora do gerenciador do que nele.`
 
+const CAROUSEL_IMAGES = [
+  '/trafego-nao-da-certo-01.png',
+  '/trafego-nao-da-certo-02.png',
+  '/trafego-nao-da-certo-03.png',
+  '/trafego-nao-da-certo-04.png',
+  '/trafego-nao-da-certo-05.png',
+  '/trafego-nao-da-certo-06.png',
+  '/trafego-nao-da-certo-07.png',
+  '/trafego-nao-da-certo-08.png',
+  '/trafego-nao-da-certo-09.png',
+  '/trafego-nao-da-certo-10.png',
+  '/trafego-nao-da-certo-11.png',
+  '/trafego-nao-da-certo-12.png',
+  '/trafego-nao-da-certo-13.png',
+  '/trafego-nao-da-certo-14.png',
+  '/trafego-nao-da-certo-15.png',
+  '/trafego-nao-da-certo-16.png',
+]
+
+const CAROUSEL_CAPTION = `“Tráfego não dá certo”
+
+Sem estratégia, sem visão, não mesmo.`
+
 
 const INDICACOES = [
   { icon: <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>,
@@ -243,6 +266,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false)
   const [activeT, setActiveT] = useState(0)
   const [tipsExpanded, setTipsExpanded] = useState(false)
+  const [carouselIndex, setCarouselIndex] = useState(0)
 
   const logosRef = useRef(null)
   const espRef = useRef(null)
@@ -1169,6 +1193,89 @@ export default function Home() {
                 >
                   {tipsExpanded ? 'ver menos' : 'ler mais...'}
                 </button>
+              </p>
+            </div>
+          </div>
+
+          {/* Terceiro post: carrossel "Tráfego não dá certo" */}
+          <div className="col-span-2 bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
+            {/* Header estilo post do Instagram */}
+            <div className="flex items-center gap-2.5 px-3.5 py-3">
+              <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+                <div className="w-full h-full rounded-full border-2 border-white overflow-hidden relative">
+                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="36px"/>
+                </div>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-[#0d1b3e] text-[13px] font-bold leading-tight truncate">arafaelageiger</p>
+              </div>
+              <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+              </svg>
+            </div>
+
+            {/* Carrossel de imagens */}
+            <div className="relative bg-[#f0efe8]" style={{ aspectRatio: '4 / 5' }}>
+              {CAROUSEL_IMAGES.map((src, i) => (
+                <Image
+                  key={src}
+                  src={src}
+                  alt={`Tráfego não dá certo — slide ${i + 1}`}
+                  fill
+                  className="object-cover"
+                  style={{ display: i === carouselIndex ? 'block' : 'none' }}
+                  sizes="(max-width: 640px) 100vw, 500px"
+                  priority={i === 0}
+                />
+              ))}
+
+              {carouselIndex > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setCarouselIndex(i => i - 1)}
+                  aria-label="Slide anterior"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 shadow flex items-center justify-center hover:bg-white transition-colors"
+                >
+                  <svg className="w-4 h-4 text-[#0d1b3e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+              )}
+              {carouselIndex < CAROUSEL_IMAGES.length - 1 && (
+                <button
+                  type="button"
+                  onClick={() => setCarouselIndex(i => i + 1)}
+                  aria-label="Próximo slide"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 shadow flex items-center justify-center hover:bg-white transition-colors"
+                >
+                  <svg className="w-4 h-4 text-[#0d1b3e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              )}
+
+              <span className="absolute top-2.5 right-2.5 bg-black/55 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded-md pointer-events-none">
+                {carouselIndex + 1}/{CAROUSEL_IMAGES.length}
+              </span>
+            </div>
+
+            {/* Ações estilo Instagram */}
+            <div className="flex items-center gap-3 px-3 pt-2.5 pb-1">
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <span className="flex-1"/>
+              <svg className="w-5 h-5 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+              </svg>
+            </div>
+
+            {/* Legenda */}
+            <div className="px-3.5 pb-4 pt-1">
+              <p className="text-[#0d1b3e] text-[13px] leading-snug whitespace-pre-line">
+                <span className="font-black">arafaelageiger</span> {CAROUSEL_CAPTION}
               </p>
             </div>
           </div>
