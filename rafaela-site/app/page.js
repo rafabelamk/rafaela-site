@@ -74,6 +74,45 @@ const FAQ_DATA = [
     a: 'Trabalho com contrato mensal, sem fidelidade de longo prazo, com escopo e valores alinhados na proposta.' },
 ]
 
+const TIPS_CAPTION = `1. Não existe campanha perfeita, existe estratégia e otimização contínua.
+
+2. Tráfego não serve só pra trazer leads. Quanto mais você é visto e tem bons eventos de conversão, mais dados você tem. Dados são ouro.
+
+3. Entenda de funil, margens, taxa de conversão e do nicho do cliente. A oferta é boa pra fazer tráfego? Se o cliente não te contextualiza, busque essas informações.
+
+4. Tráfego não faz venda, comercial faz. Não existe lead curioso, existe objeção e agregação de valor. Tráfego promove. Vendedor vende.
+
+5. Você PRECISA rastrear suas conversões. GTM é tão importante quanto o gerenciador.
+
+6. Sem boa comunicação o cliente fica inseguro e não fecha. Traduza métricas em contexto. Não basta dizer que o CTR está baixo, explique o porquê. Comunique sempre.
+
+7. Seja sincero e não reativo. Se o tráfego está ruim, comunique antes de ser questionado e traga explicação e resolução.
+
+8. Seja proativo. Enxergue o problema antes do cliente e leve a solução junto.
+
+9. Seja organizado com nomenclatura de campanhas e pastas. Desorganização faz você perder dinheiro e clientes.
+
+10. Seja comprometido com os resultados e o dinheiro do seu cliente, afinal ambos são seus também.
+
+11. IA é aliada, não inimiga nem substituta. IA analisa, você refina. O olhar humano AINDA é um diferencial.
+
+12. Cliente precisa ser participativo. Você precisa dele, mas ele também precisa de você. É uma relação de sociedade.
+
+13. Tráfego só impulsiona o que já existe. Não salva negócio e não tem culpa se a oferta ou comercial é ruim. Mas tenha certeza do gargalo antes de apontar culpados.
+
+14. Muita gente começa cobrando barato e cria um posicionamento difícil de reverter. Saiba reconhecer quando você está trazendo resultado.
+
+15. Teste é cultura, não exceção. Tráfego sem teste é achismo.
+
+16. O criativo é o maior alavancador de resultado hoje. O que diferencia campanha boa de ruim é o criativo.
+
+17. Filtre os clientes. Produz criativo? Tem site? Está disposto a fazer? Cobre a parte ou agregue valor. Tudo tem impacto no tráfego.
+
+18. Decisões sem dados são achismo, e métricas sem contexto são só ruído, porque está bom, porque está ruim? O que já rodou? Tem histórico? O que deu certo? O que NÃO deu certo. Aprender a fazer perguntas certas
+
+18. Hoje o conhecimento técnico de gerenciador já não diferencia ninguém. Mas quanto mais você entende de tráfego, mais você entende que ele acontece mais fora do gerenciador do que nele.`
+
+
 const INDICACOES = [
   { icon: <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>,
     title: 'Ter um bom comercial',
@@ -203,6 +242,7 @@ export default function Home() {
   const [checkedFit, setCheckedFit] = useState([])
   const [scrolled, setScrolled] = useState(false)
   const [activeT, setActiveT] = useState(0)
+  const [tipsExpanded, setTipsExpanded] = useState(false)
 
   const logosRef = useRef(null)
   const espRef = useRef(null)
@@ -1059,6 +1099,74 @@ export default function Home() {
             <div className="px-3.5 pb-4 pt-1">
               <p className="text-[#0d1b3e] text-[13px] leading-snug">
                 <span className="font-black">arafaelageiger</span> Por dentro da estratégia no Gerenciador de Anúncios 👁️📊
+              </p>
+            </div>
+          </div>
+
+          {/* Segundo post: lições sobre tráfego pago */}
+          <div className="max-w-[320px] mx-auto mt-6 bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden text-left">
+            {/* Header estilo post do Instagram */}
+            <div className="flex items-center gap-2.5 px-3.5 py-3">
+              <div className="w-9 h-9 rounded-full p-[2px] flex-shrink-0" style={{background:'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)'}}>
+                <div className="w-full h-full rounded-full border-2 border-white overflow-hidden relative">
+                  <Image src="/foto-perfil.png" alt="Rafaela Geiger" fill className="object-cover object-top" sizes="36px"/>
+                </div>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-[#0d1b3e] text-[13px] font-bold leading-tight truncate">arafaelageiger</p>
+              </div>
+              <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+              </svg>
+            </div>
+
+            {/* Vídeo */}
+            <div className="relative bg-[#0d1b3e]" style={{ aspectRatio: '9 / 16' }}>
+              <video
+                src="/aprendizados-trafego-pago.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover"
+              >
+                Seu navegador não suporta a exibição de vídeos.
+              </video>
+              <span className="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/55 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded-md pointer-events-none">
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Reels
+              </span>
+            </div>
+
+            {/* Ações estilo Instagram */}
+            <div className="flex items-center gap-4 px-3.5 pt-3 pb-1.5">
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <span className="flex-1"/>
+              <svg className="w-6 h-6 text-[#0d1b3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+              </svg>
+            </div>
+
+            {/* Legenda com "ler mais" */}
+            <div className="px-3.5 pb-4 pt-1">
+              <p className="text-[#0d1b3e] text-[13px] leading-snug whitespace-pre-line">
+                <span className="font-black">arafaelageiger</span>{' '}
+                {tipsExpanded ? TIPS_CAPTION : TIPS_CAPTION.split('\n\n')[0]}
+                {' '}
+                <button
+                  type="button"
+                  onClick={() => setTipsExpanded(v => !v)}
+                  className="text-gray-400 font-semibold hover:text-gray-600 transition-colors"
+                >
+                  {tipsExpanded ? 'ver menos' : 'ler mais...'}
+                </button>
               </p>
             </div>
           </div>
